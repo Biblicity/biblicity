@@ -1,0 +1,9 @@
+bf==0.7.0
+bl==0.17.0
+bref==0.4.1
+bxml==0.6.1
+cssselect==1.0.0
+lxml==3.6.4
+sass==2.3
+tornadoweb==0.0.1.4
+Unum==4.1.3
