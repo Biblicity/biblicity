@@ -1,2 +1,2 @@
-# biblicity_net
+# biblicity
 web application for biblicity.net
