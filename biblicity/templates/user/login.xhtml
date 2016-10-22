@@ -1,0 +1,20 @@
+{% extends "../layout.xhtml" %}
+{% block main %}
+<form method="post">
+{% module xsrf_form_html() %}
+<table>
+	<tr>
+		<td>Email:</td>
+		<td><input type="text" name="user_email" value=""/></td>
+	</tr>
+	<tr>
+		<td>Password:</td>
+		<td><input type="password" name="user_password" value=""/></td>
+	</tr>
+	<tr>
+		<td></td>
+		<td><input type="submit" name="user_login" value="Log In"/></td>
+	</tr>
+</table>
+</form>
+{% end %}

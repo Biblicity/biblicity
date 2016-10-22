@@ -13,7 +13,7 @@ config = {
     "Programming Language :: Python :: 3"
   ],
   "entry_points": {},
-  "install_requires": ['bl', 'bsql', 'bweb', 'tornado', 'bcrypt', 'passlib'],
+  "install_requires": ['bl', 'bsql', 'bweb', 'tornado', 'bcrypt', 'passlib', 'psycopg2'],
   "extras_require": {
     "dev": [],
     "test": []

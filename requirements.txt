@@ -1,10 +1,13 @@
 bcrypt==3.1.1
--e git+https://github.com/Biblicity/biblicity.git@4740f01e8ec9c4fd8555705d3af748e516d3cd79#egg=biblicity
+-e git+https://github.com/Biblicity/biblicity.git@9d16f6fd375954ab391d7451b6fa9fe0e840502a#egg=biblicity
 -e git+https://github.com/BlackEarth/bl.git@7d6f2748070fdc89c9d5decf106e16a365a1f85f#egg=bl
+bleach==1.4.3
 -e git+https://github.com/BlackEarth/bsql.git@dd5056ebb4cbe221f8ef70f10b2d24a0a64cc0c6#egg=bsql
 -e git+https://github.com/BlackEarth/bweb@10ffd3df33cb682bc2a03239d59b2035407c6e49#egg=bweb
 cffi==1.8.3
+html5lib==0.9999999
 passlib==1.6.5
+psycopg2==2.6.2
 pycparser==2.16
 six==1.10.0
 tornado==4.4.2
