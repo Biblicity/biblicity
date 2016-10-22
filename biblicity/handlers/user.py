@@ -9,7 +9,7 @@ log = logging.getLogger()
 log.setLevel(logging.DEBUG)
 
 class UserHandler(Handler):
-    "shared initialization for users"
+    "shared initialization for user"
 
 class UserSignup(UserHandler):
     def get(c, user=None, form_errors=None):
