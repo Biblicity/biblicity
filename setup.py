@@ -1,6 +1,6 @@
 config = {
-  "name": "",
-  "version": "0.1",
+  "name": "biblicity_net",
+  "version": "0.0.1",
   "description": "",
   "url": "",
   "author": "Sean Harrison",
@@ -13,7 +13,7 @@ config = {
     "Programming Language :: Python :: 3"
   ],
   "entry_points": {},
-  "install_requires": ["bl"],
+  "install_requires": ['bl', 'bsql', 'bweb', 'tornado', 'bcrypt', 'passlib'],
   "extras_require": {
     "dev": [],
     "test": []
@@ -31,7 +31,7 @@ from codecs import open
 
 path = os.path.dirname(os.path.abspath(__file__))
 
-with open(os.path.join(path, 'README.rst'), encoding='utf-8') as f:
+with open(os.path.join(path, 'README.md'), encoding='utf-8') as f:
     read_me = f.read()
 
 setup(
