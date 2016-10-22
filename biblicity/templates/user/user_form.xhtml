@@ -1,0 +1,29 @@
+<form method="post">
+{% module xsrf_form_html() %}
+<table>
+	<tr>
+		<td>Name:</td>
+		<td><input type="text" name="user_name" value="{{user.name or ''}}"/></td>
+	</tr>
+	<tr>
+		<td>Email:</td>
+		<td><input type="text" name="user_email" value="{{user.email or ''}}"/></td>
+	</tr>
+	<tr>
+		<td>Password:</td>
+		<td><input type="password" name="user_password" value=""/></td>
+	</tr>
+	<tr>
+		<td>Public Bio:</td>
+		<td><textarea name="user_bio">{{user.bio or ''}}</textarea></td>
+	</tr>
+	<tr>
+		<td></td>
+		<td><input type="checkbox" name="user_agreed"/> I agree to the Terms of Service</td>
+	</tr>
+	<tr>
+		<td></td>
+		<td><input type="submit" name="user_signup" value="Sign up"/></td>
+	</tr>
+</table>
+</form>
