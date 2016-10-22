@@ -1,0 +1,40 @@
+
+[Module] 
+path: /Users/sah/biblicity/biblicity/biblicity
+
+[Database]
+adaptor: psycopg2
+server: postgresql
+connection_string: 
+        dbname=biblicity
+        host=localhost
+        port=5432
+        user=sah
+migrations: ${Module:path}/models/psql
+debug: False
+
+[Site]
+name: biblicity
+scheme: http
+host: localhost
+port: 8200
+path: 
+url: ${scheme}://${host}:${port}${path}
+module: ${Module:path}
+session_storage: DatabaseStorage
+
+[Tornado]
+template_path: ${Module:path}/templates
+static_path: ${Module:path}/www
+static_url_prefix: /static/
+cookie_secret: yJBh9KKKNYGewpqYsvgg83jU5MC7mZzhmX5WCeurAt5kJMj4hekqVfvNyeBu9UkC
+xsrf_cookies: True
+debug: False
+
+[Email]
+delivery: smtp
+host: ${Site:host}
+port: 25
+
+[Markdown]
+extensions: ['extra', 'admonition', 'meta', 'nl2br', 'smarty', 'toc', 'wikilinks']
