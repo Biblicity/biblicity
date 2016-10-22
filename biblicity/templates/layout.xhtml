@@ -1,0 +1,67 @@
+<!doctype html>
+<!--[if lt IE 9]><html class="ie"><![endif]-->
+<!--[if gte IE 9]><!--><html xmlns="http://www.w3.org/1999/xhtml"><!--<![endif]-->
+<!-- based on frameless (framelessgrid.com) by Joni Korpi -->
+	<head>
+		<meta charset="utf-8"/>
+		<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"/>
+		<meta name="viewport" content="width=device-width, initial-scale=1"/>
+		
+		<title>{% block title %}biblicity: Grow in God Daily{% end %}</title>
+		
+		<link rel="stylesheet" href="{{c.static_url('css/biblicity.css')}}"/>
+		<!-- <link rel="stylesheet" href="{{c.static_url('js/font-awesome/css/font-awesome.min.css')}}"/> -->
+{% block stylesheets %}
+{% end %}
+		<link rel="shortcut icon" href="/favicon.ico" type="image/x-icon">
+		<link rel="icon" href="/favicon.ico" type="image/x-icon">
+		<!--[if lt IE 9]>
+			<script src="{{c.static_url('js/html5shiv.js')}}"></script>
+		<![endif]-->
+{% block head_data %}
+{% end %}
+	</head>
+	<body lang="en" onLoad="{% block body_onLoad %}{% end %}">
+{% block body_start %}{% end %}
+
+<div id="body">
+
+<div id="head">
+	<div id="logo"><a href="{{c.config.Site.url}}"/>biblicity.net</a></div>
+	<div id="top-nav">
+{% block top_nav_content %}
+	{% if c.session.get('email') is None %}
+		<a href="{{c.config.Site.url}}/user/login">login</a>
+	{% else %}
+		<a href="{{c.config.Site.url}}/user/logout">logout</a>
+	{% end %}
+{% end %}
+	</div>
+</div>
+
+{% if c.messages is not None and c.messages != {} %}
+<div id="messages">
+{% if c.messages.error is not None %}
+	<p class="error">{{c.messages.error}}</p>
+{% end %}
+{% if c.messages.warning is not None %}
+	<p class="warning">{{c.messages.warning}}</p>
+{% end %}
+{% if c.messages.notice is not None %}
+	<p class="notice">{{c.messages.notice}}</p>
+{% end %}
+</div>
+{% end %}
+
+<div id="main">
+{% block main %}	
+{% end %}
+</div>	
+
+<div id="footer"><strong>biblicity.net</strong> Copyright &copy; 2016 by <a href="http://blackearthgroup.com" target="_blank">Black Earth Group</a>. All rights reserved.</div>
+
+</div>
+{% block scripts_at_end %}
+{% end %}
+	</body>
+</html>

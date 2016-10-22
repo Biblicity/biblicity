@@ -8,6 +8,7 @@ create table users (
     id          uuid not null unique,   -- created using uuid5 and the URL namespace with email address
     pwd         varchar not null,
     name        varchar not null,
+    agreed      boolean,
     registered  timestamptz(0) default current_timestamp,
     verified    timestamptz(0),
     bio         text
