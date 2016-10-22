@@ -1,7 +1,7 @@
 config = {
-  "name": "biblicity_net",
+  "name": "biblicity",
   "version": "0.0.1",
-  "description": "",
+  "description": "python web application for biblicity.net",
   "url": "",
   "author": "Sean Harrison",
   "author_email": "sah@blackearthgroup.com",
