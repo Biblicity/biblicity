@@ -1,7 +1,7 @@
 bcrypt==3.1.1
-biblicity-net==0.0.1
+-e git+https://github.com/Biblicity/biblicity.git@4740f01e8ec9c4fd8555705d3af748e516d3cd79#egg=biblicity
 -e git+https://github.com/BlackEarth/bl.git@7d6f2748070fdc89c9d5decf106e16a365a1f85f#egg=bl
--e git+https://github.com/BlackEarth/bsql.git@65ba2322e8e2869b89c49353178a6ffcdefb7fc5#egg=bsql
+-e git+https://github.com/BlackEarth/bsql.git@dd5056ebb4cbe221f8ef70f10b2d24a0a64cc0c6#egg=bsql
 -e git+https://github.com/BlackEarth/bweb@10ffd3df33cb682bc2a03239d59b2035407c6e49#egg=bweb
 cffi==1.8.3
 passlib==1.6.5
