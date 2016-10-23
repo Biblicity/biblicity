@@ -21,7 +21,12 @@ class Item(bsql.model.Model):
 
         # cache the history in the item itself
         history = self.history or []
-        history.append({k:str(self.get(k)) for k in ['id', 'user_email', 'created']})
+        history_entry = {
+            'id': self.id, 
+            'created': str(self.created),
+            'title': self.title_with_ref, 
+            'user':{k:user[k] for k in ['id', 'email', 'name']}}
+        history.append(history_entry)
         self.history = json.dumps(history)
 
     def after_select(self):
@@ -32,6 +37,13 @@ class Item(bsql.model.Model):
 
     def commit(self, cursor=None, **args):
         self.insert(cursor=cursor, **args)
+
+    @property
+    def title_with_ref(self):
+        s = self.title
+        if self.bref not in [None, '']:
+            s += " (%s)" % self.bref
+        return s
 
     @property
     def user(self):

@@ -105,3 +105,11 @@ class UserLogout(UserHandler):
         c.reset_session()
         c.redirect(c.config.Site.url)
 
+class UserView(UserHandler):
+    def get(c, id):
+        user = User(c.db).select_one(id=id)
+        if user is None:
+            c.write_error(404)
+        else:
+            c.render("user/view.xhtml", user=user)
+

@@ -1,0 +1,11 @@
+{% extends "../layout.xhtml" %}
+{% block main %}
+<h1>{{user.name}}</h1>
+<p>{{user.bio}}</p>
+{% for item in user.items() %}
+<div class="item_listing">
+	<h2><a href="{{c.config.Site.url}}/items/{{item.id}}">{{item.title}}{{item.bref and ' (%s)' % item.bref or ''}}</a></h2>
+	<p>{{item.created.strftime("%B %d, %Y")}}</p>
+</div>
+{% end for %}
+{% end block %}

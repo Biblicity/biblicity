@@ -15,3 +15,7 @@ class User(bweb.models.user.User):
             self.name = self.email.split('@')[0].strip()
         self.registered = datetime.now()
         self.verified = self.registered
+
+    def items(self, update=True, orderby='created desc', **kwargs):
+        from .item import Item
+        return self.to_many(Item, update=update, orderby=orderby, **kwargs)
