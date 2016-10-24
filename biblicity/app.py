@@ -23,7 +23,8 @@ routes = [
     url(r"^/user/?logout/?" % Patterns, UserLogout),
     
     # == Users == 
-    url(r"^/users/(?P<id>%(slug)s)" % Patterns, UserView),
+    url(r"^/user/?" % Patterns, UserIndex),
+    url(r"^/user/(?P<id>%(slug)s)" % Patterns, UserView),
     # url(r"^/users/?(?P<id>%(slug)s)?/edit/?" % Patterns, UserEdit),
 
     # == Items == 

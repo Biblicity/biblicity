@@ -3,6 +3,7 @@ import json, logging, sys, traceback
 from bl.dict import Dict, StringDict
 from bl.url import URL
 from biblicity.models.user import User
+from bweb.handler import require_login
 from .handler import Handler
 
 log = logging.getLogger()
@@ -104,6 +105,12 @@ class UserLogout(UserHandler):
     def get(c):
         c.reset_session()
         c.redirect(c.config.Site.url)
+
+class UserIndex(UserHandler):
+    @require_login
+    def get(c):
+        users = User(c.db).select(orderby="registered")
+        c.render("user/index.xhtml", users=users)
 
 class UserView(UserHandler):
     def get(c, id):
