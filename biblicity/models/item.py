@@ -1,6 +1,7 @@
 
 import json, uuid
 import datetime
+import bleach
 from bl.dict import Dict
 import bsql.model
 
@@ -10,21 +11,31 @@ class Item(bsql.model.Model):
 
     def before_insert_or_update(self):
         """items are not updated per se -- a new version is always created, linked to the previous."""
+        # make sure we have a valid user
         from .user import User
         assert self.user_email is not None
         user = User(self.db).select_one(email=self.user_email)
 
+        # create a new id and link to the previous version
         if self.id is not None:
             self.previous_id = self.id
         self.created = datetime.datetime.now()
         self.id = str(uuid.uuid5(uuid.UUID(user.id), str(self.created)))
+
+        # scrub the title, reference, version, and body
+        self.title = bleach.clean(self.title or '')
+        self.bref = bleach.clean(self.bref or '')
+        self.bversion = bleach.clean(self.bversion or '')
+        self.body = bleach.clean(self.body or '')
 
         # cache the history in the item itself
         history = self.history or []
         history_entry = {
             'id': self.id, 
             'created': str(self.created),
-            'title': self.title_with_ref, 
+            'title': self.title, 
+            'bref': self.bref,
+            'bversion': self.bversion,
             'user':{k:user[k] for k in ['id', 'email', 'name']}}
         history.append(history_entry)
         self.history = json.dumps(history)
@@ -39,7 +50,7 @@ class Item(bsql.model.Model):
         self.insert(cursor=cursor, **args)
 
     @property
-    def title_with_ref(self):
+    def title_with_bref(self):
         s = self.title
         if self.bref not in [None, '']:
             s += " (%s)" % self.bref
