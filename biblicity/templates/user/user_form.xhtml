@@ -11,19 +11,27 @@
 	</tr>
 	<tr>
 		<td>Password:</td>
-		<td><input type="password" name="user_password" value=""/></td>
+		<td><input type="password" name="user_password" value="{{user.password or ''}}"/></td>
 	</tr>
 	<tr>
 		<td>Public Bio:</td>
 		<td><textarea name="user_bio">{{user.bio or ''}}</textarea></td>
 	</tr>
+	{% if user.id is None %}
 	<tr>
 		<td></td>
 		<td><input type="checkbox" name="user_agreed"/> I agree to the Terms of Service</td>
 	</tr>
+	{% end if %}
 	<tr>
 		<td></td>
-		<td><input type="submit" name="user_signup" value="Sign up"/></td>
+		<td>
+			{% if user.id is None %}
+			<input type="submit" name="user_signup" value="Sign up"/>
+			{% else %}
+			<input type="submit" name="user_edit" value="Save Changes"/>
+			{% end if %}
+		</td>
 	</tr>
 </table>
 </form>

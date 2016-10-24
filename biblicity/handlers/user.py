@@ -99,7 +99,7 @@ class UserLogin(UserHandler):
             if c.get_argument('return', default=None) not in [None, '']:
                 c.redirect(c.get_argument('return'))
             else:
-                c.redirect(c.config.Site.url + '/users/' + user.id)
+                c.redirect(c.config.Site.url + '/user/' + user.id)
 
 class UserLogout(UserHandler):
     def get(c):
@@ -119,4 +119,35 @@ class UserView(UserHandler):
             c.write_error(404)
         else:
             c.render("user/view.xhtml", user=user)
+
+class UserEdit(UserHandler):
+    @require_login
+    def get(c, id):
+        user = User(c.db).select_one(id=id)
+        if user.email != c.session.get('email'):
+            c.write_error(403)
+        else:
+            c.render("user/edit.xhtml", user=user)
+
+    @require_login
+    def post(c, id):
+        user = User(c.db).select_one(id=id)
+        if user.email != c.session.get('email'):
+            c.write_error(403)
+        else:
+            user.update(
+                name=c.get_argument('user_name', default=''),
+                email=c.get_argument('user_email'),
+                bio=c.get_argument('user_bio'))
+            try:
+                if c.get_argument("user_password", default='').strip() != '':
+                    log.debug("password = " + c.get_argument('user_password'))
+                    user.set_password(c.get_argument('user_password'))
+                user.commit()
+                c.redirect(c.config.Site.url + '/user/'+ user.id)
+            except:
+                c.messages.error = str(sys.exc_info()[1])
+                c.render("user/edit.xhtml", user=user)
+                
+
 

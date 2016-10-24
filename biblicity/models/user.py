@@ -1,6 +1,7 @@
 
 import uuid
 from datetime import datetime
+import bleach
 import bweb.models.user
 
 class User(bweb.models.user.User):
@@ -13,6 +14,8 @@ class User(bweb.models.user.User):
         self.id = str(uuid.uuid5(uuid.NAMESPACE_URL, self.email))
         if self.name is None or self.name.strip()=='':
             self.name = self.email.split('@')[0].strip()
+        self.name = bleach.clean(self.name)
+        self.bio = bleach.clean(self.bio)
         self.registered = datetime.now()
         self.verified = self.registered
 
