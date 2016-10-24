@@ -3,26 +3,26 @@
 <table>
 	<tr>
 		<td>Title:</td>
-		<td colspan="2"><input type="text" name="item_title" value="{{item.title or ''}}"/></td>
+		<td colspan="2"><input type="text" id="item_title" name="item_title" value="{{item.title or ''}}"/></td>
 	</tr>
 	<tr>
 		<td>Reference:</td>
 		<td>
 			<input type="text" name="item_bref" value="{{item.bref or ''}}"/>
-			Version: <input type="text" name="item_bversion" value="{{item.bversion or ''}}"/>
+			Version: <input type="text" id="item_bversion" name="item_bversion" value="{{item.bversion or ''}}"/>
 		</td>
 	</tr>
 	<tr>
 		<td>Body:</td>
-		<td><textarea name="item_body">{{item.body or ''}}</textarea></td>
+		<td><textarea id="item_body" name="item_body">{{item.body or ''}}</textarea></td>
 	</tr>
+	<!-- <tr>
+		<td></td>
+		<td><input type="checkbox" id="item_agreement" name="item_agreement"/> I affirm that I have the right to post this content and hereby license it under the <a href="https://creativecommons.org/licenses/by-sa/4.0/" target="_blank">CC BY-SA 4.0</a> license.</td>
+	</tr> -->
 	<tr>
 		<td></td>
-		<td><input type="checkbox" name="item_agreement"/> I affirm that I have the right to post this content and hereby license it under the <a href="https://creativecommons.org/licenses/by-sa/4.0/" target="_blank">CC BY-SA 4.0</a> license.</td>
-	</tr>
-	<tr>
-		<td></td>
-		<td><input type="submit" name="item_save" value="Save"/></td>
+		<td><input type="submit" id="item_save" name="item_save" value="Save"/></td>
 	</tr>
 </table>
 </form>

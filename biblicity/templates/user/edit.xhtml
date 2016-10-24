@@ -1,5 +1,6 @@
 {% extends "../layout.xhtml" %}
 {% block title %}Edit: {{user.name}} — {{c.config.Site.name}}{% end block %}
+{% block body_onLoad %}document.getElementById('user_name').focus();{% end block %}
 {% block main %}
 {% include "user_form.xhtml" %}
 {% end %}

@@ -26,12 +26,12 @@ class ItemNew(Handler):
             bref=c.get_argument('item_bref', default=''),
             bversion=c.get_argument('item_bversion', default=''),
             body=c.get_argument('item_body', default=''))
-        if c.get_argument('item_agreement', default='false').lower() not in ['on', 'true', '1']:
-            c.messages.error = "Please agree to the license terms in order to save the item."
-            c.render("items/new.xhtml", item=item)
-        else:
-            item.commit()
-            c.redirect(c.config.Site.url + '/items/' + item.id_slash_title)
+        # if c.get_argument('item_agreement', default='false').lower() not in ['on', 'true', '1']:
+        #     c.messages.error = "Please agree to the license terms in order to save the item."
+        #     c.render("items/new.xhtml", item=item)
+        # else:
+        item.commit()
+        c.redirect(c.config.Site.url + '/items/' + item.id_slash_title)
 
 
 
@@ -57,12 +57,12 @@ class ItemEdit(Handler):
                 bref=c.get_argument('item_bref', default=''),
                 bversion=c.get_argument('item_bversion', default=''),
                 body=c.get_argument('item_body', default=''))
-            if c.get_argument('item_agreement', default='false').lower() not in ['on', 'true', '1']:
-                c.messages.error = "Please agree to the license terms in order to save the item."
-                c.render("items/edit.xhtml", item=item)
-            else:
-                item.commit()
-                c.redirect(c.config.Site.url + '/items/' + item.id_slash_title)
+            # if c.get_argument('item_agreement', default='false').lower() not in ['on', 'true', '1']:
+            #     c.messages.error = "Please agree to the license terms in order to save the item."
+            #     c.render("items/edit.xhtml", item=item)
+            # else:
+            item.commit()
+            c.redirect(c.config.Site.url + '/items/' + item.id_slash_title)
 
 class ItemCopy(Handler):
 

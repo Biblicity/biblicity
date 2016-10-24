@@ -1,5 +1,6 @@
 {% extends "../layout.xhtml" %}
 {% block title %}New Item — {{c.config.Site.name}}{% end block %}
+{% block body_onLoad %}document.getElementById('item_title').focus();{% end %}
 {% block main %}
 {% include "item_form.xhtml" %}
 {% end %}

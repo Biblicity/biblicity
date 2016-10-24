@@ -60,7 +60,7 @@ class UserSignup(UserHandler):
             c.save_session()
 
             # redirect to the user's new account
-            url = '/'.join([c.config.Site.url, 'user', user.id])
+            url = '/'.join([c.config.Site.url, 'user', user.id_slash_name])
             log.info("Signup completed successfully, redirecting to %s" % url)
             c.redirect(str(url))
 
@@ -103,7 +103,7 @@ class UserLogin(UserHandler):
             if c.get_argument('return', default=None) not in [None, '']:
                 c.redirect(c.get_argument('return'))
             else:
-                c.redirect(c.config.Site.url + '/user/' + user.id)
+                c.redirect(c.config.Site.url + '/user/' + user.id_slash_name)
 
 class UserLogout(UserHandler):
     def get(c):
@@ -148,7 +148,7 @@ class UserEdit(UserHandler):
                     log.debug("password = " + c.get_argument('user_password'))
                     user.set_password(c.get_argument('user_password'))
                 user.commit()
-                c.redirect(c.config.Site.url + '/user/'+ user.id)
+                c.redirect(c.config.Site.url + '/user/'+ user.id_slash_name)
             except:
                 c.messages.error = str(sys.exc_info()[1])
                 c.render("user/edit.xhtml", user=user)
