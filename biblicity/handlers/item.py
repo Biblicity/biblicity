@@ -64,3 +64,17 @@ class ItemEdit(Handler):
                 item.commit()
                 c.redirect(c.config.Site.url + '/items/' + item.id)
 
+class ItemCopy(Handler):
+
+    @require_login
+    def get(c, id):
+        item = Item(c.db).select_one(id=id)
+        if item is None:
+            c.write_error(404)
+        elif item.user_email == c.session.get('email'):
+            c.session['messages'] = Dict(error="No need to copy your own item, you already have it.")
+            c.redirect(c.config.Site.url + '/items/' + item.id)
+        else:
+            item.user_email = c.session.get('email')
+            item.commit()
+            c.redirect(c.config.Site.url + '/items/' + item.id)

@@ -16,6 +16,9 @@ class Handler(bweb.handler.Handler):
         super().initialize()
         c.db = c.settings.get('db')
         c.init_session()
+        if c.session.get('messages') is not None:
+            c.messages.update(**c.session.get('messages'))
+            log.debug(c.messages)
         log.debug({'url': str(c.url), 'method': c.request.method, 'handler': c.__class__.__name__})
 
     def prepare(c):
