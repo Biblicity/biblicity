@@ -26,17 +26,17 @@ class UserSignup(UserHandler):
             user = User(c.db).select_one(email=c.get_argument('user_email'), cursor=cursor)
             if user is None:
                 # Register new user
+                user = User(c.db, 
+                        email=c.get_argument('user_email'), 
+                        password=c.get_argument('user_password'),
+                        name=c.get_argument('user_name'),
+                        bio=c.get_argument('user_bio'))
                 agreed = c.get_argument('user_agreed', default='')
                 if agreed.lower() not in ['on', 'true', '1']:
                     raise ValueError("You must agree to the terms of service to register.")
                 else:
                     log.info("Register new user: %s" % c.get_argument('user_email'))
-                    user = User(c.db, 
-                                email=c.get_argument('user_email'), 
-                                password=c.get_argument('user_password'),
-                                name=c.get_argument('user_name'),
-                                bio=c.get_argument('user_bio'),
-                                agreed=True)
+                    user.agreed = True
                     registration_errors = user.register(cursor=cursor)
                     if registration_errors is not None:
                         raise ValueError(
@@ -58,7 +58,7 @@ class UserSignup(UserHandler):
             c.save_session()
 
             # redirect to the user's new account
-            url = '/'.join([c.config.Site.url, 'users', user.id])
+            url = '/'.join([c.config.Site.url, 'user', user.id])
             log.info("Signup completed successfully, redirecting to %s" % url)
             c.redirect(str(url))
 

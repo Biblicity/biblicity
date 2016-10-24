@@ -7,12 +7,14 @@
 </h1>
 <p>{{user.bio}}</p>
 <div class="user_items_listing">
+{% if len(user.items()) > 0 %}
 <table>
 	<tr>
 		<th>Date</th>
 		<th>Title</th>
 		<th>Reference</th>
 	</tr>
+{% end if %}
 {% for item in user.items() %}
 	<tr>
 		<td>{{str(item.created).split(' ')[0]}}</td>
