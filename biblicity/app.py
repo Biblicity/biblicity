@@ -27,6 +27,7 @@ routes = [
     # url(r"^/users/?(?P<id>%(slug)s)?/edit/?" % Patterns, UserEdit),
 
     # == Items == 
+    url(r"^/items/new" % Patterns, ItemNew),
     url(r"^/items/(?P<id>%(slug)s)/edit" % Patterns, ItemEdit),
     url(r"^/items/(?P<id>%(slug)s)/?(?:%(slug)s)?" % Patterns, ItemView),   # title slug can appear at end of url, ignored
 
@@ -43,5 +44,5 @@ if __name__ == "__main__":
     loghandler = logging.StreamHandler()
     log.addHandler(loghandler)
     log.setLevel(logging.INFO)
-    log.info('serving at ' + config.Site.url)
+    log.info(config.Site.url + ': serving at ' + config.Site.url)
     IOLoop.instance().start()
