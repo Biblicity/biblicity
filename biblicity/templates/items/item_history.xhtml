@@ -1,20 +1,16 @@
-{% extends "../layout.xhtml" %}
-{% block main %}
-<h1>{{item.title_with_ref}}</h1>
-<p>{{item.body or ''}}</p>
-
 <table>
 	<tr>
 		<th>Date</th>
 		<th>User</th>
 		<th>Title</th>
+		<th>Reference</th>
 	</tr>
 {% for entry in item.history %}
 	<tr>
 		<td>{{entry.created.split(' ')[0]}}</td>
 		<td><a href="/users/{{entry.user.id}}">{{entry.user.name}}</a></td>
-		<td>{{entry.title}}</td>
+		<td><a href="/items/{{entry.id}}">{{entry.title}}</a></td>
+		<td>{{entry.bref or ''}}</td>
 	</tr>	
 {% end for %}
 </table>
-{% end block %}

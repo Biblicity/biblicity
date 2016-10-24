@@ -27,7 +27,8 @@ routes = [
     # url(r"^/users/?(?P<id>%(slug)s)?/edit/?" % Patterns, UserEdit),
 
     # == Items == 
-    url(r"^/items/(?P<id>%(slug)s)" % Patterns, ItemView),
+    url(r"^/items/(?P<id>%(slug)s)/edit" % Patterns, ItemEdit),
+    url(r"^/items/(?P<id>%(slug)s)/?(?:%(slug)s)?" % Patterns, ItemView),   # title slug can appear at end of url, ignored
 
     # == Templates in the site == 
     url(r"^(?P<path>%(path)s)" % Patterns, Template),

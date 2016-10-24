@@ -1,0 +1,20 @@
+{% extends "../layout.xhtml" %}
+{% block main %}
+<div class="item_content">
+	<h1>{{item.title_with_ref}}
+	<span class="item_editing_icons">
+	{% if c.session.get('email') is not None %}
+		<a class="fa fa-pencil" href="{{c.config.Site.url}}/items/{{item.id}}/edit"></a>
+		{% if item.user_email != c.session.get('email') %}
+		<a class="fa fa-files-o" href="{{c.config.Site.url}}/items/{{item.id}}/copy"></a>
+		{% end if %}
+	{% end if %}
+	</span>
+</h1>
+<p>{% raw item.body or '' %}</p>
+</div>
+<div class="item_version_history">
+<h2>Version History</h2>
+{% include "item_history.xhtml" %}
+</div>
+{% end block %}

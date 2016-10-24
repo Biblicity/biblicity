@@ -2,10 +2,20 @@
 {% block main %}
 <h1>{{user.name}}</h1>
 <p>{{user.bio}}</p>
+<div class="user_items_listing">
+<table>
+	<tr>
+		<th>Date</th>
+		<th>Title</th>
+		<th>Reference</th>
+	</tr>
 {% for item in user.items() %}
-<div class="item_listing">
-	<h2><a href="{{c.config.Site.url}}/items/{{item.id}}">{{item.title}}{{item.bref and ' (%s)' % item.bref or ''}}</a></h2>
-	<p>{{item.created.strftime("%B %d, %Y")}}</p>
-</div>
+	<tr>
+		<td>{{str(item.created).split(' ')[0]}}</td>
+		<td><a href="{{c.config.Site.url}}/items/{{item.id}}">{{item.title or ''}}</a></td>
+		<td>{{item.bref or ''}}</td>
+	</tr>
 {% end for %}
+</table>
+</div>
 {% end block %}
