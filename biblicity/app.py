@@ -5,6 +5,7 @@ from bweb.patterns import Patterns
 from tornado.web import url
 from tornado.ioloop import IOLoop
 from biblicity import config, db
+from tornado.web import StaticFileHandler
 from biblicity.handlers.template import *
 from biblicity.handlers.user import *
 from biblicity.handlers.item import *
@@ -12,6 +13,10 @@ from biblicity.handlers.item import *
 log = logging.getLogger(__name__)
 
 routes = [
+    # == Static Content == 
+    url(r"^/static/(.*)", StaticFileHandler, {'path': config.Tornado.static_path}),
+    url(r"/(favicon\.ico)", StaticFileHandler, {'path': config.Tornado.static_path}),
+
     # == User Management == 
     url(r"^/user/?signup/?" % Patterns, UserSignup),
     url(r"^/user/?login/?" % Patterns, UserLogin),
