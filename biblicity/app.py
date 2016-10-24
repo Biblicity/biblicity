@@ -24,8 +24,9 @@ routes = [
     
     # == Users == 
     url(r"^/user/?" % Patterns, UserIndex),
-    url(r"^/user/(?P<id>%(slug)s)" % Patterns, UserView),
-    url(r"^/user/?(?P<id>%(slug)s)?/edit/?" % Patterns, UserEdit),
+    url(r"^/user/?(?P<id>%(slug)s)/edit/?" % Patterns, UserEdit),
+    url(r"^/user/(?P<id>%(slug)s)/?(?:%(slug)s)?" % Patterns, UserView),    # user name slug can appear at end of url, ignored
+
 
     # == Items == 
     url(r"^/items/new" % Patterns, ItemNew),

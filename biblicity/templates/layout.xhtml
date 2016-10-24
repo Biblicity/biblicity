@@ -31,14 +31,19 @@
 	<div id="top-nav">
 {% block top_nav_content %}
 	{% if c.session.get('email') is None %}
-		<a href="{{c.config.Site.url}}/user/signup">sign up</a>
-		| <a href="{{c.config.Site.url}}/user/login">login</a>
+		<a href="{{c.config.Site.url}}/user/signup">Sign Up</a>
+		| <a href="{{c.config.Site.url}}/user/login">Login</a>
 	{% else %}
-		<a class="fa fa-plus-circle" href="{{c.config.Site.url}}/items/new" title="Post new item"></a>
-		| <a href="{{c.config.Site.url}}/user/logout">logout</a>
+		<a href="{{c.config.Site.url}}/user/{{c.session.get('user_id') or ''}}/{{str(c.String(c.session.get('user_name') or '').hyphenify())}}">{{c.session.get('user_name') or ''}}</a>
+		| <a href="{{c.config.Site.url}}/user/logout">Logout</a>
 	{% end %}
 {% end %}
 	</div>
+</div>
+
+<div class="main_nav">
+<a class="" href="{{c.config.Site.url}}/user"> Users</a>
+| <a class="fa fa-plus-circle" href="{{c.config.Site.url}}/items/new" title="Post New Item"> New Item</a>
 </div>
 
 {% if c.messages is not None and c.messages != {} %}

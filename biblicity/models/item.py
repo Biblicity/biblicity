@@ -2,6 +2,8 @@
 import json, uuid
 import datetime
 import bleach
+from markdown import markdown
+from bl.string import String
 from bl.dict import Dict
 import bsql.model
 
@@ -55,6 +57,14 @@ class Item(bsql.model.Model):
         if self.bref not in [None, '']:
             s += " (%s)" % self.bref
         return s
+
+    @property
+    def id_slash_title(self):
+        return "%s/%s" % (self.id, String(self.title or '').hyphenify())
+
+    @property
+    def body_html(self):
+        return markdown(self.body)
 
     @property
     def user(self):

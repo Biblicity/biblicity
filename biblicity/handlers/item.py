@@ -31,7 +31,7 @@ class ItemNew(Handler):
             c.render("items/new.xhtml", item=item)
         else:
             item.commit()
-            c.redirect(c.config.Site.url + '/items/' + item.id)
+            c.redirect(c.config.Site.url + '/items/' + item.id_slash_title)
 
 
 
@@ -62,7 +62,7 @@ class ItemEdit(Handler):
                 c.render("items/edit.xhtml", item=item)
             else:
                 item.commit()
-                c.redirect(c.config.Site.url + '/items/' + item.id)
+                c.redirect(c.config.Site.url + '/items/' + item.id_slash_title)
 
 class ItemCopy(Handler):
 
@@ -73,8 +73,8 @@ class ItemCopy(Handler):
             c.write_error(404)
         elif item.user_email == c.session.get('email'):
             c.session['messages'] = Dict(error="No need to copy your own item, you already have it.")
-            c.redirect(c.config.Site.url + '/items/' + item.id)
+            c.redirect(c.config.Site.url + '/items/' + item.id_slash_title)
         else:
             item.user_email = c.session.get('email')
             item.commit()
-            c.redirect(c.config.Site.url + '/items/' + item.id)
+            c.redirect(c.config.Site.url + '/items/' + item.id_slash_title)

@@ -8,8 +8,8 @@
 {% for entry in item.history %}
 	<tr>
 		<td>{{entry.created.split(' ')[0]}}</td>
-		<td><a href="{{c.config.Site.url}}/user/{{entry.user.id}}">{{entry.user.name}}</a></td>
-		<td><a href="{{c.config.Site.url}}/items/{{entry.id}}">{{entry.title}}</a></td>
+		<td><a href="{{c.config.Site.url}}/user/{{entry.user.id}}/{{str(c.String(entry.user.name).hyphenify())}}">{{entry.user.name}}</a></td>
+		<td><a href="{{c.config.Site.url}}/items/{{entry.id}}/{{str(c.String(entry.title).hyphenify())}}">{{entry.title}}</a></td>
 		<td>{{entry.bref or ''}}</td>
 	</tr>	
 {% end for %}

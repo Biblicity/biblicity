@@ -55,6 +55,8 @@ class UserSignup(UserHandler):
 
             # log the user in
             c.session['email'] = user.email
+            c.session['user_id'] = user.id
+            c.session['user_name'] = user.name
             c.save_session()
 
             # redirect to the user's new account
@@ -95,6 +97,8 @@ class UserLogin(UserHandler):
             c.get()
         else:
             c.session['email'] = user.email
+            c.session['user_id'] = user.id
+            c.session['user_name'] = user.name
             c.session.save()
             if c.get_argument('return', default=None) not in [None, '']:
                 c.redirect(c.get_argument('return'))

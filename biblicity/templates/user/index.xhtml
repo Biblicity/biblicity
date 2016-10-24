@@ -9,7 +9,7 @@
 	{% for user in users %}
 	<tr>
 		<td>{{str(user.registered).split(' ')[0]}}</td>
-		<td><a href="{{c.config.Site.url}}/user/{{user.id}}">{{user.name}}</a></td>
+		<td><a href="{{c.config.Site.url}}/user/{{user.id_slash_name}}">{{user.name}}</a></td>
 	</tr>
 	{% end for %}
 </table>

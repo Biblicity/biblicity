@@ -19,7 +19,7 @@
 {% for item in user.items() %}
 	<tr>
 		<td>{{str(item.created).split(' ')[0]}}</td>
-		<td><a href="{{c.config.Site.url}}/items/{{item.id}}">{{item.title or ''}}</a></td>
+		<td><a href="{{c.config.Site.url}}/items/{{item.id_slash_title}}">{{item.title or ''}}</a></td>
 		<td>{{item.bref or ''}}</td>
 	</tr>
 {% end for %}

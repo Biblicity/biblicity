@@ -2,6 +2,7 @@
 import uuid
 from datetime import datetime
 import bleach
+from bl.string import String
 import bweb.models.user
 
 class User(bweb.models.user.User):
@@ -22,3 +23,7 @@ class User(bweb.models.user.User):
     def items(self, update=True, orderby='created desc', **kwargs):
         from .item import Item
         return self.to_many(Item, update=update, orderby=orderby, **kwargs)
+
+    @property
+    def id_slash_name(self):
+        return "%s/%s" % (self.id, String(self.name).hyphenify())
