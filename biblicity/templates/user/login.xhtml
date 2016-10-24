@@ -1,4 +1,5 @@
 {% extends "../layout.xhtml" %}
+{% block title %}Login — {{c.config.Site.name}}{% end block %}
 {% block main %}
 <form method="post">
 {% module xsrf_form_html() %}

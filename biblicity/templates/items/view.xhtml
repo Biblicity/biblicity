@@ -1,4 +1,5 @@
 {% extends "../layout.xhtml" %}
+{% block title %}{{item.title_with_bref}} — {{c.config.Site.name}}{% end block %}
 {% block main %}
 <div class="item_content">
 	<h1>{{item.title_with_bref}}
