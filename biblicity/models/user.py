@@ -11,7 +11,7 @@ class User(bweb.models.user.User):
         This id stays constant in the system, even if their email changes.
         """
         assert self.email is not None
-        self.id = str(uuid.uuid5(uuid.NAMESPACE_URL, self.email))
+        self.id = str(uuid.uuid5(uuid.NAMESPACE_URL, self.email)).replace('-', '')
         if self.name is None or self.name.strip()=='':
             self.name = self.email.split('@')[0].strip()
         self.name = bleach.clean(self.name)

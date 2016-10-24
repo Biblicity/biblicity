@@ -4,8 +4,8 @@ begin;
 ---------------------------------------------------------------------------
 
 create table users (
-    email       varchar primary key,    -- user's email is better for joins than surrogate id 
-    id          uuid not null unique,   -- created using uuid5 and the URL namespace with email address
+    email       varchar primary key,        -- user's email is better for joins than surrogate id 
+    id          varchar not null unique,    -- created using uuid5 and the URL namespace with email address
     pwd         varchar not null,
     name        varchar not null,
     agreed      boolean,

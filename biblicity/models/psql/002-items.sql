@@ -4,8 +4,8 @@ begin;
 ---------------------------------------------------------------------------
 
 create table items (
-    id              uuid primary key,       -- created using uuid5 with user's uuid and the item's created timestamp
-    previous_id     uuid                    -- linked list item version history
+    id              varchar primary key,       -- created using uuid5 with user's uuid and the item's created timestamp
+    previous_id     varchar                    -- linked list item version history
                         references items(id),
     user_email      varchar not null
                         references users(email)

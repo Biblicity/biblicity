@@ -20,7 +20,7 @@ class Item(bsql.model.Model):
         if self.id is not None:
             self.previous_id = self.id
         self.created = datetime.datetime.now()
-        self.id = str(uuid.uuid5(uuid.UUID(user.id), str(self.created)))
+        self.id = str(uuid.uuid5(uuid.UUID(user.id), str(self.created))).replace('-', '')
 
         # scrub the title, reference, version, and body
         self.title = bleach.clean(self.title or '')
