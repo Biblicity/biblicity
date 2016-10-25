@@ -1,7 +1,7 @@
 bcrypt==3.1.1
 bl==0.18.0
 bleach==1.4.3
-bsql==0.8.0
+bsql==0.8.1
 bweb==0.5.1
 cffi==1.8.3
 html5lib==0.9999999
