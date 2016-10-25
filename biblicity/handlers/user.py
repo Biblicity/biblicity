@@ -11,6 +11,9 @@ log.setLevel(logging.DEBUG)
 
 class UserHandler(Handler):
     "shared initialization for user"
+    def initialize(c):
+        super().initialize()
+        c.user = User(c.db).select_one(email=c.session.get('email'))
 
 class UserSignup(UserHandler):
     def get(c, user=None, form_errors=None):
@@ -153,5 +156,71 @@ class UserEdit(UserHandler):
                 c.messages.error = str(sys.exc_info()[1])
                 c.render("user/edit.xhtml", user=user)
                 
+class UserFollow(UserHandler):
+    @require_login
+    def get(c, id):
+        other= User(c.db).select_one(id=id)
+        if other.email in [o.email for o in c.user.following]:
+            c.session['messages'].error = "You are already following %s" % other.name
+        else:
+            try:
+                c.user.follow(other.email)
+                c.session['messages'].notice = "You are now following %s" % other.name
+            except:
+                c.session['messages'].error = str(sys.exc_info()[1])
+        if c.get_argument('return', default=None) is not None:
+            c.redirect(c.get_argument('return'))
+        else:
+            c.redirect(c.config.Site.url+'/user/'+other.id)
 
+class UserUnfollow(UserHandler):
+    @require_login
+    def get(c, id):
+        other= User(c.db).select_one(id=id)
+        if other.email not in [o.email for o in c.user.following]:
+            c.session['messages'].error = "You are already not following %s" % other.name
+        else:
+            try:
+                c.user.unfollow(other.email)
+                c.session['messages'].notice = "You are no longer following %s" % other.name
+            except:
+                c.session['messages'].error = str(sys.exc_info()[1])
+        if c.get_argument('return', default=None) is not None:
+            c.redirect(c.get_argument('return'))
+        else:
+            c.redirect(c.config.Site.url+'/user/'+other.id)
+
+class UserBlock(UserHandler):
+    @require_login
+    def get(c, id):
+        other= User(c.db).select_one(id=id)
+        if other.email in [o.email for o in c.user.blocking]:
+            c.session['messages'].error = "You are already blocking %s" % other.name
+        else:
+            try:
+                c.user.block(other.email)
+                c.session['messages'].notice = "You are now blocking %s" % other.name
+            except:
+                c.session['messages'].error = str(sys.exc_info()[1])
+        if c.get_argument('return', default=None) is not None:
+            c.redirect(c.get_argument('return'))
+        else:
+            c.redirect(c.config.Site.url+'/user/'+other.id)
+
+class UserUnblock(UserHandler):
+    @require_login
+    def get(c, id):
+        other= User(c.db).select_one(id=id)
+        if other.email not in [o.email for o in c.user.blocking]:
+            c.session['messages'].error = "You are already not blocking %s" % other.name
+        else:
+            try:
+                c.user.unblock(other.email)
+                c.session['messages'].notice = "You are no longer blocking %s" % other.name
+            except:
+                c.session['messages'].error = str(sys.exc_info()[1])
+        if c.get_argument('return', default=None) is not None:
+            c.redirect(c.get_argument('return'))
+        else:
+            c.redirect(c.config.Site.url+'/user/'+other.id)
 

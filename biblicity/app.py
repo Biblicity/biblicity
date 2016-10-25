@@ -25,6 +25,10 @@ routes = [
     # == Users == 
     url(r"^/user/?" % Patterns, UserIndex),
     url(r"^/user/?(?P<id>%(slug)s)/edit/?" % Patterns, UserEdit),
+    url(r"^/user/?(?P<id>%(slug)s)/follow/?" % Patterns, UserFollow),
+    url(r"^/user/?(?P<id>%(slug)s)/unfollow/?" % Patterns, UserUnfollow),
+    url(r"^/user/?(?P<id>%(slug)s)/block/?" % Patterns, UserBlock),
+    url(r"^/user/?(?P<id>%(slug)s)/unblock/?" % Patterns, UserUnblock),
     url(r"^/user/(?P<id>%(slug)s)/?(?:%(slug)s)?" % Patterns, UserView),    # user name slug can appear at end of url, ignored
 
 

@@ -41,15 +41,15 @@ class User(bweb.models.user.User):
             and kind='following'
             """, vals=[self.email], Record=User)
 
-    def follow(self, other_email):
+    def follow(self, other_email, cursor=None):
         from .user_relationship import UserRelationship
         rel = UserRelationship(self.db, user_email=self.email, other_email=other_email, kind='following')
-        rel.insert()
+        rel.insert(cursor=cursor)
 
-    def unfollow(self, other_email):
+    def unfollow(self, other_email, cursor=None):
         from .user_relationship import UserRelationship
         rel = UserRelationship(self.db).select_one(user_email=self.email, other_email=other_email, kind='following')
-        rel.delete()
+        rel.delete(cursor=cursor)
 
     @property
     def blocking(self):
@@ -64,8 +64,12 @@ class User(bweb.models.user.User):
             and kind='blocking'
             """, vals=[self.email], Record=User)
 
-    def block(self, other_email):
+    def block(self, other_email, cursor=None):
         from .user_relationship import UserRelationship
         rel = UserRelationship(self.db, user_email=self.email, other_email=other_email, kind='blocking')
         rel.insert(cursor=cursor)
 
+    def unblock(self, other_email, cursor=None):
+        from .user_relationship import UserRelationship
+        rel = UserRelationship(self.db).select_one(user_email=self.email, other_email=other_email, kind='blocking')
+        rel.delete(cursor=cursor)
