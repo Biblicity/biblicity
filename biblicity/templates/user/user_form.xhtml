@@ -21,9 +21,7 @@
 	<tr>
 		<td colspan="2">
 			{% if user.id is None %}
-			<span class="float-left">
 			<input type="checkbox" id="user_agreed" name="user_agreed"/>&nbsp;I agree to the <a href="{{c.config.Site.url}}/terms-of-service" target="_blank">Terms of Service</a>
-			</span>
 			{% end if %}
 			<span class="float-right">
 			{% if user.id is None %}

@@ -107,7 +107,8 @@ a, a:link, a:visited {
 	color: green;
 }
 
-form input {
+form input[type="text"],
+form input[type="password"] {
 	height: 2rem;
 	width: 25rem;
 	padding: 0 0.5em ;
@@ -126,14 +127,14 @@ form input[type="submit"] {
 	color: green;
 	background-color: #ffffff;
 	border-radius: .5em;
+	-webkit-appearance: button;
 }
 
 form input[type="checkbox"] {
 	width: auto;
 	/*font-size: 2em;*/
 	padding: 0.5em 0;
-	vertical-align: bottom;
-	-webkit-appearance: button;
+	vertical-align: center;
 }
 
 form input.notice {
