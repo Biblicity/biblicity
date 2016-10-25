@@ -176,3 +176,10 @@ td {
 	line-height: 1.0;
 }
 
+.byline {
+	margin-bottom: 1em;
+	font-family: "Source Sans Pro", sans-serif;
+	font-size: 14pt;
+	font-style: italic;
+}
+
