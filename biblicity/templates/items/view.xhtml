@@ -12,6 +12,7 @@
 	{% end if %}
 	</span>
 </h1>
+<p class="byline">created by <a href="{{c.config.Site.url}}/user/{{item.history[0].user.id}}">{{item.history[0].user.name}}</a> on {{item.history[0].created.split()[0]}}</p>
 <p>{% raw item.body_html or '' %}</p>
 </div>
 <div class="listing">
