@@ -3,7 +3,7 @@
 {% block main %}
 <h1>{{user.name}}
 	{% if user.email == c.session.get('email') %}
-	<span class="editing_icons"><a class="fa fa-pencil" href="{{c.config.Site.url}}/user/{{user.id}}/edit"></a></span>
+	<a class="fa fa-pencil editing_icon" href="{{c.config.Site.url}}/user/{{user.id}}/edit"></a>
 	{% end if %}
 </h1>
 <p>{{user.bio}}</p>
