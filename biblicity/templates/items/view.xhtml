@@ -2,13 +2,14 @@
 {% block title %}{{item.title_with_bref}} — {{c.config.Site.name}}{% end block %}
 {% block main %}
 <div class="item_content">
-	<h1>{{item.title_with_bref}}
+<h1>{{item.title_with_bref}}
 	<span class="editing_icons">
 	{% if c.session.get('email') is not None %}
 		<a class="fa fa-pencil editing_icon" href="{{c.config.Site.url}}/items/{{item.id}}/edit"></a>
-		{% if item.user_email != c.session.get('email') %}
+{#		{% if item.user_email != c.session.get('email') %}
 		<a class="fa fa-files-o editing_icon" href="{{c.config.Site.url}}/items/{{item.id}}/copy"></a>
 		{% end if %}
+#}
 	{% end if %}
 	</span>
 </h1>

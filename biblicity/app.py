@@ -35,7 +35,7 @@ routes = [
     # == Items == 
     url(r"^/items/new" % Patterns, ItemNew),
     url(r"^/items/(?P<id>%(slug)s)/edit" % Patterns, ItemEdit),
-    url(r"^/items/(?P<id>%(slug)s)/copy" % Patterns, ItemCopy),
+    # url(r"^/items/(?P<id>%(slug)s)/copy" % Patterns, ItemCopy),
     url(r"^/items/(?P<id>%(slug)s)/?(?:%(slug)s)?" % Patterns, ItemView),   # title slug can appear at end of url, ignored
 
     # == Templates in the site == 
