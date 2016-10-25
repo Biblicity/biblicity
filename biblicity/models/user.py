@@ -24,6 +24,19 @@ class User(bweb.models.user.User):
         from .item import Item
         return self.to_many(Item, update=update, orderby=orderby, **kwargs)
 
+    def recent_activity(self, orderby='created desc'):
+        from .item import Item
+        return self.db.select("""
+            select i.* from items i
+            where i.title != '' 
+            and (i.user_email = %s
+                or user_email in (
+                    select rel.other_email from users_relationships rel
+                    where rel.user_email=%s
+                    and rel.kind='following'))
+            order by created desc;
+            """, vals=[self.email, self.email], Record=Item)
+
     @property
     def id_slash_name(self):
         return "%s/%s" % (self.id, String(self.name).hyphenify())

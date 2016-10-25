@@ -14,24 +14,9 @@
 	{% end if %}
 </h1>
 <p>{% raw user.bio %}</p>
-{% if len(user.items()) > 0 %}
-<div>
-<h2>Recent Items</h2>
-{% end if %}
-{% set previous = [] %}
-{% for item in user.items() %}
-{% if item.id not in previous %}
-<p>
-	<strong><a href="{{c.config.Site.url}}/items/{{item.id_slash_title}}">{{item.title_with_bref or ''}}</a></strong> 
-	(<em>{{str(item.created).split(' ')[0]}}</em>)
-</p>
-</div>
-{% end if %}
-{% set previous = previous + [item.previous_id] %}
-{% end for %}
 
 {% if len(user.following) > 0 %}
-<div>
+<div class="two-col float-right">
 <h2><span class="fa fa-user-plus"></span> Following</h2>
 {% for u in user.following %}
 <p>
@@ -40,6 +25,24 @@
 {% end for %}
 </div>
 {% end if %}
+
+{% set recent_activity = user.recent_activity() %}
+{% if len(recent_activity) > 0 %}
+<div>
+<h2>Recent Activity</h2>
+{% end if %}
+{% set previous = [] %}
+{% for item in recent_activity %}
+{% if item.id not in previous %}
+<p>
+	<strong><a href="{{c.config.Site.url}}/items/{{item.id_slash_title}}">{{item.title_with_bref or ''}}</a></strong> 
+	(<em>{{str(item.created).split(' ')[0]}} 
+	— <a href="{{c.config.Site.url}}/user/{{item.user.id_slash_name}}">{{item.user.name}}</a></em>)
+</p>
+</div>
+{% end if %}
+{% set previous = previous + [item.previous_id] %}
+{% end for %}
 
 <div>&nbsp;</div>
 {% end block %}
