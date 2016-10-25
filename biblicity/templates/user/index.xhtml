@@ -2,10 +2,14 @@
 {% block title %}Items — {{c.config.Site.name}}{% end block %}
 {% block main %}
 <h1>Biblicity Users</h1>
+{% set following = [o.email for o in c.user.following] %}
 {% for user in users %}
 <p>
 	<strong><a href="{{c.config.Site.url}}/user/{{user.id_slash_name}}">{{user.name}}</a></strong>
 	(<em>registered {{str(user.registered).split(' ')[0]}}</em>)
+	{% if user.email in following %}
+	<span class="fa fa-user-plus" title="You are following {{user.name}}"></span>
+	{% end if %}
 </p>
 {% end for %}
 {% end block %}

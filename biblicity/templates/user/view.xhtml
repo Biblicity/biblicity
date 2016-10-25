@@ -5,12 +5,12 @@
 	{% if user.email == c.session.get('email') %}
 	<a class="fa fa-pencil editing_icon" href="{{c.config.Site.url}}/user/{{user.id}}/edit" title="Edit Profile"></a>
 	{% elif user.email in [o.email for o in c.user.following] %}
-	<a class="fa fa-user editing_icon" href="{{c.config.Site.url}}/user/{{user.id}}/unfollow" title="Unfollow User"><strong>–</strong></a>
+	<a class="fa fa-user editing_icon" href="{{c.config.Site.url}}/user/{{user.id}}/unfollow" title="Unfollow {{user.name}}"><strong>–</strong></a>
 	{% elif user.email not in [o.email for o in c.user.blocking] %}
-	<a class="fa fa-user-plus editing_icon" href="{{c.config.Site.url}}/user/{{user.id}}/follow" title="Follow User"></a>
-	<a class="fa fa-user-times editing_icon" href="{{c.config.Site.url}}/user/{{user.id}}/block" title="Block User"></a>
+	<a class="fa fa-user-plus editing_icon" href="{{c.config.Site.url}}/user/{{user.id}}/follow" title="Follow {{user.name}}"></a>
+	<a class="fa fa-user-times editing_icon" href="{{c.config.Site.url}}/user/{{user.id}}/block" title="Block {{user.name}}"></a>
 	{% else %}
-	<a class="fa fa-user editing_icon" href="{{c.config.Site.url}}/user/{{user.id}}/unblock" title="Unblock User"></a>
+	<a class="fa fa-user editing_icon" href="{{c.config.Site.url}}/user/{{user.id}}/unblock" title="Unblock {{user.name}}"></a>
 	{% end if %}
 </h1>
 <p>{{user.bio}}</p>
