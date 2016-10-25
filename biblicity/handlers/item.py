@@ -70,9 +70,10 @@ class ItemCopy(Handler):
         if item is None:
             c.write_error(404)
         elif item.user_email == c.session.get('email'):
-            c.session['messages'] = Dict(error="No need to copy your own item, you already have it.")
+            c.session['messages'].error = "No need to copy your own item, you already have it."
             c.redirect(c.config.Site.url + '/items/' + item.id_slash_title)
         else:
             item.user_email = c.session.get('email')
             item.commit()
+            c.session['messages'].notice = "You have copied “%s” to your account." % item.title
             c.redirect(c.config.Site.url + '/items/' + item.id_slash_title)

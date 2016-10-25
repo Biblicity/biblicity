@@ -54,6 +54,7 @@ h1, h2, h3, h4 {
 	margin: 0.5rem 0 0.25rem 0;
 	font-family: "Chaparral Pro", "chaparral-pro", sans-serif;
 	font-weight: normal;
+	line-height: 1.0;
 }
 
 h2, h3, h4 {
@@ -94,9 +95,11 @@ a, a:link, a:visited {
 
 .float-right {
 	float: right;
+	margin-left: 1rem;
 }
 .float-left {
 	float: left;
+	margin-right: 1rem;
 }
 
 .left {
@@ -120,9 +123,10 @@ a.editing_icon,
 span.editing_icon {
 	vertical-align: middle;
 	border: 1px solid green;
-	border-radius: 10px;
-	padding: 5px;
-	font-size: 1.25rem;
+	border-radius: 7px;
+	padding: 3px;
+	margin: 5px 5px 5px 0;
+	font-size: 1.0rem;
 }
 
 a.editing_icon:hover {
@@ -192,3 +196,6 @@ td {
 	font-style: italic;
 }
 
+.two-col { max-width: 45%; }
+.three-col { max-width: 30%; }
+.four-col { max-width: 20%; }

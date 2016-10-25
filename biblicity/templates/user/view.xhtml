@@ -1,6 +1,7 @@
 {% extends "../layout.xhtml" %}
 {% block title %}{{user.name}} — {{c.config.Site.name}}{% end block %}
 {% block main %}
+<div class="main_content">
 <h1>{{user.name}}
 	{% if user.email == c.session.get('email') %}
 	<a class="fa fa-pencil editing_icon" href="{{c.config.Site.url}}/user/{{user.id}}/edit" title="Edit Profile"></a>
@@ -14,6 +15,7 @@
 	{% end if %}
 </h1>
 <p>{% raw user.bio %}</p>
+</div>
 
 {% if len(user.following) > 0 %}
 <div class="two-col float-right">
@@ -31,18 +33,21 @@
 <div>
 <h2>Recent Activity</h2>
 {% end if %}
-{% set previous = [] %}
+{% set previous_ids = [] %}
+{% set previous_titles = [] %}
 {% for item in recent_activity %}
-{% if item.id not in previous %}
+{% if item.id not in previous_ids and item.title_with_bref not in previous_titles %}
 <p>
 	<strong><a href="{{c.config.Site.url}}/items/{{item.id_slash_title}}">{{item.title_with_bref or ''}}</a></strong> 
+	<br/>
 	(<em>{{str(item.created).split(' ')[0]}} 
 	— <a href="{{c.config.Site.url}}/user/{{item.user.id_slash_name}}">{{item.user.name}}</a></em>)
 </p>
-</div>
 {% end if %}
-{% set previous = previous + [item.previous_id] %}
+{% set previous_ids = previous_ids + [item.previous_id] %}
+{% set previous_titles = previous_titles + [item.title_with_bref] %}
 {% end for %}
+</div>
 
 <div>&nbsp;</div>
 {% end block %}
