@@ -13,8 +13,9 @@
 	<a class="fa fa-user editing_icon" href="{{c.config.Site.url}}/user/{{user.id}}/unblock" title="Unblock {{user.name}}"></a>
 	{% end if %}
 </h1>
-<p>{{user.bio}}</p>
+<p>{% raw user.bio %}</p>
 {% if len(user.items()) > 0 %}
+<div>
 <h2>Recent Items</h2>
 {% end if %}
 {% set previous = [] %}
@@ -24,8 +25,21 @@
 	<strong><a href="{{c.config.Site.url}}/items/{{item.id_slash_title}}">{{item.title_with_bref or ''}}</a></strong> 
 	(<em>{{str(item.created).split(' ')[0]}}</em>)
 </p>
+</div>
 {% end if %}
 {% set previous = previous + [item.previous_id] %}
 {% end for %}
-</table>
+
+{% if len(user.following) > 0 %}
+<div>
+<h2><span class="fa fa-user-plus"></span> Following</h2>
+{% for u in user.following %}
+<p>
+	<strong><a href="{{c.config.Site.url}}/user/{{u.id_slash_name}}">{{u.name}}</a></strong>
+</p>
+{% end for %}
+</div>
+{% end if %}
+
+<div>&nbsp;</div>
 {% end block %}

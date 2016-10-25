@@ -39,6 +39,7 @@ class User(bweb.models.user.User):
                 on rel.user_email = users.email
             where users.email=%s
             and kind='following'
+            order by created desc
             """, vals=[self.email], Record=User)
 
     def follow(self, other_email, cursor=None):
@@ -62,6 +63,7 @@ class User(bweb.models.user.User):
                 on rel.user_email = users.email
             where users.email=%s
             and kind='blocking'
+            order by created
             """, vals=[self.email], Record=User)
 
     def block(self, other_email, cursor=None):
