@@ -27,3 +27,45 @@ class User(bweb.models.user.User):
     @property
     def id_slash_name(self):
         return "%s/%s" % (self.id, String(self.name).hyphenify())
+
+    @property
+    def following(self):
+        return self.db.select("""
+            select other.*, rel.created as rel_created 
+            from users other
+            inner join users_relationships rel
+                on rel.other_email = other.email
+            inner join users
+                on rel.user_email = users.email
+            where users.email=%s
+            and kind='following'
+            """, vals=[self.email], Record=User)
+
+    def follow(self, other_email):
+        from .user_relationship import UserRelationship
+        rel = UserRelationship(self.db, user_email=self.email, other_email=other_email, kind='following')
+        rel.insert()
+
+    def unfollow(self, other_email):
+        from .user_relationship import UserRelationship
+        rel = UserRelationship(self.db).select_one(user_email=self.email, other_email=other_email, kind='following')
+        rel.delete()
+
+    @property
+    def blocking(self):
+        return self.db.select("""
+            select other.*, rel.created as rel_created
+            from users other
+            inner join users_relationships rel
+                on rel.other_email = other.email
+            inner join users
+                on rel.user_email = users.email
+            where users.email=%s
+            and kind='blocking'
+            """, vals=[self.email], Record=User)
+
+    def block(self, other_email):
+        from .user_relationship import UserRelationship
+        rel = UserRelationship(self.db, user_email=self.email, other_email=other_email, kind='blocking')
+        rel.insert(cursor=cursor)
+
