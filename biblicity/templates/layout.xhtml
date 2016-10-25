@@ -34,13 +34,14 @@
 {% block top_nav_content %}
 	{% if c.session.get('email') is None %}
 		<a href="{{c.config.Site.url}}/user/signup">Sign Up</a>
-		| <a href="{{c.config.Site.url}}/user/login">Login</a>
+		• <a href="{{c.config.Site.url}}/user/login">Login</a>
 	{% else %}
 		<a href="{{c.config.Site.url}}/user/{{c.session.get('user_id') or ''}}/{{str(c.String(c.session.get('user_name') or '').hyphenify())}}">{{c.session.get('user_name') or ''}}</a>
-		| <a href="{{c.config.Site.url}}/user/logout">Logout</a>
+		• <a href="{{c.config.Site.url}}/user/logout">Logout</a>
 	{% end %}
 {% end %}
 	</div>
+	<div>&nbsp;</div>
 </div>
 
 <div id="main_nav">
