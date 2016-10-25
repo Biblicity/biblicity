@@ -116,7 +116,15 @@ class UserLogout(UserHandler):
 class UserIndex(UserHandler):
     @require_login
     def get(c):
-        users = User(c.db).select(orderby="registered")
+        # omit blocked users from the user list
+        users = User(c.db).select(
+            where="""
+                email not in (
+                    select rel.other_email from users_relationships rel
+                    where rel.user_email=%s
+                    and kind='blocking')""",
+            vals=[c.user.email],
+            orderby="registered")
         c.render("user/index.xhtml", users=users)
 
 class UserView(UserHandler):
