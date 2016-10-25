@@ -1,6 +1,10 @@
 {% extends "../layout.xhtml" %}
 {% block title %}Sign up — {{c.config.Site.name}}{% end block %}
+{% block head_data %}
+	<script src="{{c.static_url('js/ckeditor/ckeditor.js')}}"></script>
+{% end block %}
 {% block body_onLoad %}document.getElementById('user_name').focus();{% end block %}
 {% block main %}
+<h1>Sign Up</h1>
 {% include "user_form.xhtml" %}
 {% end %}

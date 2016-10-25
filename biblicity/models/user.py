@@ -16,7 +16,7 @@ class User(bweb.models.user.User):
         if self.name is None or self.name.strip()=='':
             self.name = self.email.split('@')[0].strip()
         self.name = bleach.clean(self.name)
-        self.bio = bleach.clean(self.bio)
+        self.bio = bleach.clean(self.bio, tags=bleach.ALLOWED_TAGS+['p','br'])
         self.registered = datetime.now()
         self.verified = self.registered
 

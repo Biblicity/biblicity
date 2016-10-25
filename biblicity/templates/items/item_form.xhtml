@@ -1,20 +1,20 @@
 <form method="post">
 {% module xsrf_form_html() %}
-<table>
+<table width="100%">
 	<tr>
-		<td>Title:</td>
-		<td colspan="2"><input type="text" id="item_title" name="item_title" value="{{item.title or ''}}"/></td>
+		<td class="label">Title:</td>
+		<td><input type="text" id="item_title" name="item_title" value="{{item.title or ''}}"/></td>
 	</tr>
 	<tr>
-		<td>Reference:</td>
-		<td>
-			<input type="text" name="item_bref" value="{{item.bref or ''}}"/>
-			Version: <input type="text" id="item_bversion" name="item_bversion" value="{{item.bversion or ''}}"/>
+		<td class="label">Reference:</td>
+		<td class="label"><!-- 
+		 --><input type="text" style="width:15rem" name="item_bref" value="{{item.bref or ''}}"/> &nbsp;
+			Version: 
+			<input type="text" style="width:5rem" id="item_bversion" name="item_bversion" value="{{item.bversion or ''}}"/>
 		</td>
 	</tr>
 	<tr>
-		<td>Body:</td>
-		<td><textarea id="item_body" name="item_body">{{item.body or ''}}</textarea></td>
+		<td colspan="2"><textarea rows="20" cols="50" id="item_body" name="item_body">{{item.body or ''}}</textarea></td>
 	</tr>
 	<!-- <tr>
 		<td></td>
@@ -22,7 +22,8 @@
 	</tr> -->
 	<tr>
 		<td></td>
-		<td><input type="submit" id="item_save" name="item_save" value="Save"/></td>
+		<td><input class="label link float-right" type="submit" id="item_save" name="item_save" value="Save"/></td>
 	</tr>
 </table>
 </form>
+<script>CKEDITOR.replace('item_body');</script>

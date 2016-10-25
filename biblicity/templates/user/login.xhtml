@@ -1,20 +1,22 @@
 {% extends "../layout.xhtml" %}
 {% block title %}Login — {{c.config.Site.name}}{% end block %}
+{% block body_onLoad %}document.getElementById('user_email').focus();{% end block %}
 {% block main %}
+<h1>Log In</h1>
 <form method="post">
 {% module xsrf_form_html() %}
 <table>
 	<tr>
 		<td>Email:</td>
-		<td><input type="text" name="user_email" value=""/></td>
+		<td><input type="text" id="user_email" name="user_email" value=""/></td>
 	</tr>
 	<tr>
 		<td>Password:</td>
-		<td><input type="password" name="user_password" value=""/></td>
+		<td><input type="password" id="user_password" name="user_password" value=""/></td>
 	</tr>
 	<tr>
 		<td></td>
-		<td><input type="submit" name="user_login" value="Log In"/></td>
+		<td><input type="submit" id="user_login" name="user_login" value="Log In"/></td>
 	</tr>
 </table>
 </form>

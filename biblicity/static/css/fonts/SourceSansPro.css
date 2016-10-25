@@ -1,0 +1,30 @@
+
+@font-face {
+	font-family: "Crimson";
+	font-weight: normal;
+	font-style: normal;
+	src: url('fonts/Crimson-Roman.otf');
+}
+
+@font-face {
+	font-family: "Crimson";
+	font-weight: normal;
+	font-style: italic;
+	src: url('fonts/Crimson-Italic.otf');
+}
+
+@font-face {
+	font-family: "Crimson";
+	font-weight: bold;
+	font-style: normal;
+	src: url('fonts/Crimson-Semibold.otf');
+}
+
+@font-face {
+	font-family: "Crimson";
+	font-weight: bold;
+	font-style: italic;
+	src: url('fonts/Crimson-SemiboldItalic.otf');
+}
+
+

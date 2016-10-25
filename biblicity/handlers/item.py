@@ -33,8 +33,6 @@ class ItemNew(Handler):
         item.commit()
         c.redirect(c.config.Site.url + '/items/' + item.id_slash_title)
 
-
-
 class ItemEdit(Handler):
 
     @require_login

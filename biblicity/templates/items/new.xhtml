@@ -1,6 +1,9 @@
 {% extends "../layout.xhtml" %}
 {% block title %}New Item — {{c.config.Site.name}}{% end block %}
 {% block body_onLoad %}document.getElementById('item_title').focus();{% end %}
+{% block head_data %}
+	<script src="{{c.static_url('js/ckeditor/ckeditor.js')}}"></script>
+{% end block %}
 {% block main %}
 {% include "item_form.xhtml" %}
 {% end %}

@@ -1,0 +1,16 @@
+{% extends "../layout.xhtml" %}
+{% block title %}Reset Password — {{c.config.Site.name}}{% end block %}
+{% block main %}
+<form method="post">
+<table>
+	<tr>
+		<td>Email:</td>
+		<td><input type="text" name="user_email" value=""/></td>
+	</tr>
+	<tr>
+		<td></td>
+		<td><input type="submit" name="reset_pwd" value="Reset Password"/></td>
+	</tr>
+</table>
+</form>
+{% end %}

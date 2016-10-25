@@ -13,8 +13,8 @@
 		<link rel="stylesheet" href="{{c.static_url('js/font-awesome/css/font-awesome.min.css')}}"/>
 {% block stylesheets %}
 {% end %}
-		<link rel="shortcut icon" href="/favicon.ico" type="image/x-icon">
-		<link rel="icon" href="/favicon.ico" type="image/x-icon">
+		<link rel="shortcut icon" href="{{c.config.Site.url}}/favicon.ico" type="image/x-icon">
+		<link rel="icon" href="{{c.config.Site.url}}/favicon.ico" type="image/x-icon">
 		<!--[if lt IE 9]>
 			<script src="{{c.static_url('js/html5shiv.js')}}"></script>
 		<![endif]-->
@@ -27,8 +27,8 @@
 <div id="body">
 
 <div id="head">
-	<div id="logo"><a href="{{c.config.Site.url}}"/>biblicity.net</a></div>
-	<div id="top-nav">
+	<div id="logo"><a href="{{c.config.Site.url}}"/><img src="http://i2.wp.com/biblicity.net/wp-content/uploads/2016/10/biblicity-logo_logotype-400px.png?zoom=2&fit=300%2C77"/></a></div>
+	<div id="top_nav">
 {% block top_nav_content %}
 	{% if c.session.get('email') is None %}
 		<a href="{{c.config.Site.url}}/user/signup">Sign Up</a>
@@ -41,9 +41,13 @@
 	</div>
 </div>
 
-<div class="main_nav">
-<a class="" href="{{c.config.Site.url}}/user"> Users</a>
-| <a class="fa fa-plus-circle" href="{{c.config.Site.url}}/items/new" title="Post New Item"> New Item</a>
+<div id="main_nav">
+{% if c.session.get('email') is not None %}
+<a href="{{c.config.Site.url}}/user"> Users</a>
+&nbsp; • &nbsp;
+<!-- <a class="fa fa-plus-circle" href="{{c.config.Site.url}}/items/new" title="Post New Item"></a> -->
+<a href="{{c.config.Site.url}}/items/new">New Item</a>
+{% end if %}
 </div>
 
 {% if c.messages is not None and c.messages != {} %}
@@ -65,7 +69,7 @@
 {% end %}
 </div>	
 
-<div id="footer"><strong>biblicity.net</strong> Copyright &copy; 2016 by <a href="http://blackearthgroup.com" target="_blank">Black Earth Group</a>. All rights reserved.</div>
+<div id="footer"><a href="{{c.config.Site.url}}"><img src="{{c.static_url('img/biblicity-logo_icon-20px.png')}}" height="15px"/> <strong>{{c.config.Site.name}}</strong></a> Copyright &copy; 2016 by <a href="http://blackearthgroup.com" target="_blank">Black Earth Group</a>. All rights reserved.</div>
 
 </div>
 {% block scripts_at_end %}

@@ -1,37 +1,39 @@
 <form method="post">
 {% module xsrf_form_html() %}
-<table>
+<table width="100%">
 	<tr>
-		<td>Name:</td>
+		<td class="label">Name:</td>
 		<td><input type="text" id="user_name" name="user_name" value="{{user.name or ''}}"/></td>
 	</tr>
 	<tr>
-		<td>Email:</td>
+		<td class="label">Email:</td>
 		<td><input type="text" id="user_email" name="user_email" value="{{user.email or ''}}"/></td>
 	</tr>
 	<tr>
-		<td>Password:</td>
+		<td class="label">Password:</td>
 		<td><input type="password" id="user_password" name="user_password" value="{{user.password or ''}}"/></td>
 	</tr>
 	<tr>
-		<td>Public Bio:</td>
-		<td><textarea id="user_bio" name="user_bio">{{user.bio or ''}}</textarea></td>
+		<td colspan="2"><span class="label">Public Bio:</span>
+		<br/>
+		<textarea id="user_bio" name="user_bio" rows="5" cols="30">{{user.bio or ''}}</textarea></td>
 	</tr>
-	{% if user.id is None %}
 	<tr>
-		<td></td>
-		<td><input type="checkbox" id="user_agreed" name="user_agreed"/> I agree to the Terms of Service</td>
-	</tr>
-	{% end if %}
-	<tr>
-		<td></td>
-		<td>
+		<td colspan="2">
 			{% if user.id is None %}
-			<input type="submit" id="user_signup" name="user_signup" value="Sign up"/>
-			{% else %}
-			<input type="submit" id="user_edit" name="user_edit" value="Save Changes"/>
+			<span class="float-left">
+			<input type="checkbox" id="user_agreed" name="user_agreed"/>&nbsp;I agree to the <a href="{{c.config.Site.url}}/terms-of-service" target="_blank">Terms of Service</a>
+			</span>
 			{% end if %}
+			<span class="float-right">
+			{% if user.id is None %}
+			<input class="link" type="submit" id="user_signup" name="user_signup" value="Sign up"/>
+			{% else %}
+			<input class="link" type="submit" id="user_edit" name="user_edit" value="Save Changes"/>
+			{% end if %}
+			</span>
 		</td>
 	</tr>
 </table>
 </form>
+<script>CKEDITOR.replace('user_bio');</script>

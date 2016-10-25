@@ -1,16 +1,11 @@
 {% extends "../layout.xhtml" %}
 {% block title %}Items — {{c.config.Site.name}}{% end block %}
 {% block main %}
-<table>
-	<tr>
-		<th>Registered</th>
-		<th>Name</th>
-	</tr>
-	{% for user in users %}
-	<tr>
-		<td>{{str(user.registered).split(' ')[0]}}</td>
-		<td><a href="{{c.config.Site.url}}/user/{{user.id_slash_name}}">{{user.name}}</a></td>
-	</tr>
-	{% end for %}
-</table>
+<h1>Biblicity Users</h1>
+{% for user in users %}
+<p>
+	<strong><a href="{{c.config.Site.url}}/user/{{user.id_slash_name}}">{{user.name}}</a></strong>
+	(<em>registered {{str(user.registered).split(' ')[0]}}</em>)
+</p>
+{% end for %}
 {% end block %}

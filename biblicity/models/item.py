@@ -28,7 +28,7 @@ class Item(bsql.model.Model):
         self.title = bleach.clean(self.title or '')
         self.bref = bleach.clean(self.bref or '')
         self.bversion = bleach.clean(self.bversion or '')
-        self.body = bleach.clean(self.body or '')
+        self.body = bleach.clean(self.body or '', tags=bleach.ALLOWED_TAGS+['p','br'])
 
         # cache the history in the item itself
         history = self.history or []

@@ -3,26 +3,22 @@
 {% block main %}
 <h1>{{user.name}}
 	{% if user.email == c.session.get('email') %}
-	<a class="fa fa-pencil" href="{{c.config.Site.url}}/user/{{user.id}}/edit"></a>
+	<span class="editing_icons"><a class="fa fa-pencil" href="{{c.config.Site.url}}/user/{{user.id}}/edit"></a></span>
 	{% end if %}
 </h1>
 <p>{{user.bio}}</p>
-<div class="user_items_listing">
 {% if len(user.items()) > 0 %}
-<table>
-	<tr>
-		<th>Date</th>
-		<th>Title</th>
-		<th>Reference</th>
-	</tr>
+<h2>Recent Items</h2>
 {% end if %}
+{% set previous = [] %}
 {% for item in user.items() %}
-	<tr>
-		<td>{{str(item.created).split(' ')[0]}}</td>
-		<td><a href="{{c.config.Site.url}}/items/{{item.id_slash_title}}">{{item.title or ''}}</a></td>
-		<td>{{item.bref or ''}}</td>
-	</tr>
+{% if item.id not in previous %}
+<p>
+	<strong><a href="{{c.config.Site.url}}/items/{{item.id_slash_title}}">{{item.title_with_bref or ''}}</a></strong> 
+	(<em>{{str(item.created).split(' ')[0]}}</em>)
+</p>
+{% end if %}
+{% set previous = previous + [item.previous_id] %}
 {% end for %}
 </table>
-</div>
 {% end block %}
