@@ -1,0 +1,11 @@
+*.egg-info
+*.ini
+__pycache__
+build
+dist
+var
+venv
+#*#
+#*.*#
+*~
+
