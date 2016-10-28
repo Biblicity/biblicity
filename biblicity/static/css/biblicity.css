@@ -39,7 +39,6 @@ div#main_nav {
 div#main {
     padding: 1em 0;
     line-height: 1.5;
-/*	font-family: "Crimson", serif;*/
 }
 
 div#footer {
@@ -112,7 +111,13 @@ a, a:link, a:visited {
 .label {
 	font-size: 80%;
 	font-weight: bold;
-	font-family: "Source Sans Pro Semibold", sans-serif;
+	font-family: "Source Sans Pro", sans-serif;
+}
+
+.label-light {
+    font-size: 80%;
+    font-weight: normal;
+    font-family: "Source Sans Pro", sans-serif;
 }
 
 .link {

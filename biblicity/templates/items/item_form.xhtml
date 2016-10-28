@@ -22,7 +22,10 @@
 	</tr> -->
 	<tr>
 		<td></td>
-		<td><input class="label link float-right" type="submit" id="item_save" name="item_save" value="Save"/></td>
+		<td class="right">
+		  <a class="label-light" style="padding:0.5em" href="{{c.config.Site.url}}/items/{{item.id_slash_title}}">Cancel</a> &nbsp; 
+		  <input class="label link" type="submit" id="item_save" name="item_save" value="Save"/>
+		</td>
 	</tr>
 </table>
 </form>
