@@ -29,7 +29,7 @@
 <div id="body">
 
 <div id="head">
-	<div id="logo"><a href="{{c.config.Site.url}}"/><img src="http://i2.wp.com/biblicity.net/wp-content/uploads/2016/10/biblicity-logo_logotype-400px.png?zoom=2&fit=300%2C77"/></a></div>
+	<div id="logo"><a href="{{c.config.Site.url}}"/><img src="{{c.static_url('img/biblicity-logo-400px.png')}}"/></a></div>
 	<div id="top_nav">
 {% block top_nav_content %}
 	{% if c.session.get('email') is None %}
