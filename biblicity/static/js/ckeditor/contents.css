@@ -6,7 +6,7 @@ For licensing, see LICENSE.md or http://ckeditor.com/license
 body
 {
 	/* Font */
-	font-family: "Source Sans Pro", sans-serif;
+	font-family: "arno-pro", serif;
 	font-size: 14pt;
 
 	/* Text color */
@@ -30,7 +30,7 @@ body
 blockquote
 {
 	font-style: italic;
-	font-family: "Source Sans Pro", sans-serif;
+	font-family: "arno-pro", serif;
 	padding: 2px 0;
 	border-style: solid;
 	border-color: #ccc;

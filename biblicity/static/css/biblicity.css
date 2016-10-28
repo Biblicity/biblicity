@@ -1,10 +1,9 @@
 
-@import url("fonts/SourceSansPro.css");
-@import url("fonts/Crimson.css");
+
 
 body {
 	text-align: center;
-	font-family: "Source Sans Pro", serif;
+	font-family: "arno-pro", serif;
 	font-size: 16pt;
 }
 
@@ -33,7 +32,7 @@ div#top_nav {
 div#main_nav {
 	clear: both;
 	font-size: 14pt;
-	font-family: "Source Sans Pro", sans-serif;
+	font-family: "Chaparral Pro", "chaparral-pro", sans-serif;
 }
 
 div#main {
@@ -111,13 +110,13 @@ a, a:link, a:visited {
 .label {
 	font-size: 80%;
 	font-weight: bold;
-	font-family: "Source Sans Pro", sans-serif;
+	font-family: "Chaparral Pro", "chaparral-pro", sans-serif;
 }
 
 .label-light {
     font-size: 80%;
     font-weight: normal;
-    font-family: "Source Sans Pro", sans-serif;
+    font-family: "Chaparral Pro", "chaparral-pro", sans-serif;
 }
 
 .link {
@@ -189,14 +188,14 @@ td {
 .listing {
 	margin-top: 3rem;
 	border-top: 1px solid #999;
-	font-family: "Source Sans Pro", sans-serif;
+	font-family: "Chaparral Pro", "chaparral-pro", sans-serif;
 	font-size: 12pt;
 	line-height: 1.0;
 }
 
 .byline {
 	margin-bottom: 1em;
-	font-family: "Source Sans Pro", sans-serif;
+	font-family: "Chaparral Pro", "chaparral-pro", sans-serif;
 	font-size: 14pt;
 	font-style: italic;
 }
