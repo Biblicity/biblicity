@@ -2,10 +2,11 @@
 
 SCRIPT=`readlink -f "$0"`
 SCRIPT_PATH=`dirname "$SCRIPT"`
-echo "SCRIPT_PATH="$SCRIPT_PATH
 source $SCRIPT_PATH/venv
 PYTHON=`which python3`
 
 # boot the web app
-/bin/su -l -c "nohup $PYTHON -m biblicity.app >>$SCRIPT_PATH/var/biblicity.app.log 2>&1 &" sah
+nohup $PYTHON -m biblicity.app >>$SCRIPT_PATH/var/biblicity.app.log 2>&1 &
+echo "$!" >$SCRIPT_PATH/var/biblicity.app.pid
+
 

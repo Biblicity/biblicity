@@ -22,7 +22,8 @@ div#head {
     border-bottom: 1px solid #999;
 }
 
-div#logo {
+div#logo, div#logo img {
+    height: 75px;
 }
 
 div#top_nav {
