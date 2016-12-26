@@ -6,7 +6,7 @@ source $SCRIPT_PATH/venv
 PYTHON=`which python3`
 
 # boot the web app
-nohup $PYTHON -m biblicity.app >>$SCRIPT_PATH/var/biblicity.app.log 2>&1 &
-echo "$!" >$SCRIPT_PATH/var/biblicity.app.pid
+nohup $PYTHON -m biblicity_net.app >>$SCRIPT_PATH/var/biblicity_net.app.log 2>&1 &
+echo "$!" >$SCRIPT_PATH/var/biblicity_net.app.pid
 
 
