@@ -1,5 +1,5 @@
 
-from biblicity.models.item import Item
+from biblicity_net.models.item import Item
 from bweb.handler import *
 from .handler import Handler
 

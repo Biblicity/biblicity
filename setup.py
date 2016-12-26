@@ -1,7 +1,7 @@
 config = {
-  "name": "biblicity",
+  "name": "biblicity_net",
   "version": "0.0.1",
-  "description": "python web application for biblicity.net",
+  "description": "Python web application for biblicity.net",
   "url": "",
   "author": "Sean Harrison",
   "author_email": "sah@blackearthgroup.com",
@@ -9,7 +9,7 @@ config = {
   "classifiers": [
     "Development Status :: 3 - Alpha",
     "Intended Audience :: Developers",
-    "License :: OSI Approved :: GNU Library or Lesser General Public License (LGPL)",
+    "License :: OSI Approved :: Mozilla Public License verson 2.0 (MPL2)",
     "Programming Language :: Python :: 3"
   ],
   "entry_points": {},

@@ -1,9 +1,7 @@
 
-
-
 body {
 	text-align: center;
-	font-family: "arno-pro", serif;
+	font-family: "Chaparral Pro", "chaparral-pro", sans-serif;
 	font-size: 16pt;
 }
 
@@ -23,7 +21,7 @@ div#head {
 }
 
 div#logo, div#logo img {
-    height: 75px;
+    height: 100px;
 }
 
 div#top_nav {
@@ -38,7 +36,7 @@ div#main_nav {
 
 div#main {
     padding: 1em 0;
-    line-height: 1.5;
+    line-height: 24pt;
 }
 
 div#footer {

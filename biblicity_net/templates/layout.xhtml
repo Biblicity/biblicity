@@ -29,9 +29,9 @@
 <div id="body">
 
 <div id="head">
-	<div id="logo"><a href="{{c.config.Site.url}}"/><img src="{{c.static_url('img/biblicity_logotype-584x150.png')}}"/></a></div>
+	<div id="logo"><a href="{{c.config.Site.url}}"/><img src="{{c.static_url('img/biblicity_logotype.png')}}"/></a></div>
 	<div id="top_nav">
-{% block top_nav_content %}
+<!-- {% block top_nav_content %}
 	{% if c.session.get('email') is None %}
 		<strong><a href="{{c.config.Site.url}}/user/signup">Sign Up</a></strong>
 		• <a href="{{c.config.Site.url}}/user/login">Login</a>
@@ -40,7 +40,7 @@
 		• <a href="{{c.config.Site.url}}/user/logout">Logout</a>
 	{% end %}
 {% end %}
-	</div>
+ -->	</div>
 	<div>&nbsp;</div>
 </div>
 
@@ -78,7 +78,7 @@
 {% end %}
 </div>	
 
-<div id="footer"><a href="{{c.config.Site.url}}"><img src="{{c.static_url('img/biblicity_icon-25px.png')}}" height="12px"/> <strong>{{c.config.Site.name}}</strong></a> Copyright &copy; 2016 by <a href="http://blackearthgroup.com" target="_blank">Black Earth Group</a>. All rights reserved. Biblicity and the Biblicity logo are trademarks of Black Earth Group, Inc.</div>
+<div id="footer"><a href="{{c.config.Site.url}}"><img src="{{c.static_url('img/biblicity_icon.png')}}" height="12px"/> {{c.config.Site.name}}</a> Copyright &copy; 2016 by <a href="http://blackearthgroup.com" target="_blank">Black Earth Group</a>. All rights reserved. Biblicity and the Biblicity logo are trademarks of Black Earth Group, Inc.</div>
 
 </div>
 {% block scripts_at_end %}

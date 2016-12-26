@@ -2,7 +2,7 @@
 import json, logging, sys, traceback
 from bl.dict import Dict, StringDict
 from bl.url import URL
-from biblicity.models.user import User
+from biblicity_net.models.user import User
 from bweb.handler import require_login
 from .handler import Handler
 

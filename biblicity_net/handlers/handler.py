@@ -6,7 +6,6 @@ from bl.url import URL
 import bweb.handler
 
 log = logging.getLogger(__name__)
-log.setLevel(logging.DEBUG)
 
 class Handler(bweb.handler.Handler):
 

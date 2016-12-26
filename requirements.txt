@@ -1,8 +1,9 @@
-bcrypt==3.1.1
-bl==0.18.0
+-e git+https://github.com/Biblicity/biblicity_net.git@0c4df2aa67dc4714d59f43ea20461536ca8c8e46#egg=biblicity_net
+-e git+https://github.com/BlackEarth/bl.git@6c97a5845455bedcf5f67b1535e5666f5fdce7d2#egg=bl
+-e git+https://github.com/BlackEarth/bsql.git@1ccb48a9a2411d7fe22377c82f4170dbb945f52f#egg=bsql
+-e git+https://github.com/BlackEarth/bweb@1f1c8b37b30fb2eeba097d224b2c22a6104779c0#egg=bweb
 bleach==1.4.3
-bsql==0.8.1
-bweb==0.5.1
+bcrypt==3.1.1
 cffi==1.8.3
 html5lib==0.9999999
 Markdown==2.6.7
