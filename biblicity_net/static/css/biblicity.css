@@ -109,11 +109,7 @@ a, a:link, a:visited {
 .label {
 	font-size: 80%;
 	font-weight: 600;
-	font-family: "chaparral-pro", sans-serif;
-}
-
-strong {
-	font-weight: 600;
+	font-family: "chaparral-pro-n6", "chaparral-pro", sans-serif;
 }
 
 .label-light {
@@ -139,6 +135,11 @@ span.editing_icon {
 a.editing_icon:hover {
 	background-color: green;
 	color: #fff;
+}
+
+b, strong {
+	font-family: "chaparral-pro-n6", "chaparral-pro", sans-serif;
+	font-weight: 600;
 }
 
 form input[type="text"],
