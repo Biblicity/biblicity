@@ -6,13 +6,15 @@
 	<p>We have a <a href="/reading-plans/bible-overview">daily Bible reading plan</a> for readers and an opportunity for writers to publish their Bible-oriented writings.</p>
 	<ul>
 		<li>
-			<p><span style="font-size:120%">If you are a Bible reader, you can use biblicity.net to read the Bible every day.</span>  Starting on January 1, 2017, we will be following a Bible Overview Reading Plan that gives an overview of the Bible in one year, reading about one chapter a day, six days a week.</p>
+			<p><span style="font-size:120%">You can use biblicity.net to read the Bible every day.</span>  Starting on January 1, 2017, the front page of biblicity.net will include the Bible reading for that day. We will be following a Bible Overview Reading Plan that gives an overview of the Bible in one year, reading about one chapter a day, six days a week.</p>
 		</li>
 		<li>
-			<p><span style="font-size:120%">If you are an author, pastor, scholar, or Christian leader, you can use biblicity.net as a platform to share your writings with others.</span>  Every day in 2017, the front page of biblicity.net will have the passage for the day, followed by a list of the writings on that passage that have been published.</p>
+			<p><span style="font-size:120%">You can use biblicity.net as a platform to share your writings with others.</span>  When you make your writings available on biblicity.net, not only can you share them with your own circle, but they can be considered for publication alongside each day’s Bible reading. Every day in 2017, the front page of biblicity.net will have the passage for the day, followed by the published writings on that passage.</p>
 		</li>
 	</ul>
 	<h2>Our mission is to make biblicity.net the best place on the internet to grow in God together with others.</h2>
 	<p>Please join us, participate, and give us your feedback as we grow in God together.</p>
-	<div class="right"><form method="get" action="/user/signup"><input type="submit" value="Sign Up Now"/></form></div>
+	{% if c.session.get('email') is None %}
+		<div class="right"><form method="get" action="/user/signup"><input type="submit" value="Sign Up Now"/></form></div>
+	{% end %}
 {% end block %}
