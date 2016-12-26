@@ -98,8 +98,7 @@ class UserLogin(UserHandler):
     def post(c):
         user = User(c.db).authenticate(
                 c.get_argument('user_email', default=None),
-                c.get_argument('user_password', default=None),
-                unverified=True)                                # Don't require email verification
+                c.get_argument('user_password', default=None))
         if user is None:
             c.messages.error = "Sorry, we don’t recognize that email and password combination."
             c.get()
