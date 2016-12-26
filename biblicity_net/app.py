@@ -18,7 +18,7 @@ routes = [
     url(r"/(favicon\.ico)", StaticFileHandler, {'path': config.Tornado.static_path}),
 
     # # == User Management == 
-    # url(r"^/user/?signup/?" % Patterns, UserSignup),
+    url(r"^/user/?signup/?" % Patterns, UserSignup),
     # url(r"^/user/?login/?" % Patterns, UserLogin),
     # url(r"^/user/?logout/?" % Patterns, UserLogout),
     

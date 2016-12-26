@@ -20,9 +20,11 @@
 	</tr>
 	<tr>
 		<td colspan="2">
+			{#
 			{% if user.id is None %}
 			<input type="checkbox" id="user_agreed" name="user_agreed"/>&nbsp;I agree to the <a href="{{c.config.Site.url}}/terms-of-service" target="_blank">Terms of Service</a>
 			{% end if %}
+			#}
 			<span class="float-right">
 			{% if user.id is None %}
 			<input class="label link" type="submit" id="user_signup" name="user_signup" value="Sign up"/>

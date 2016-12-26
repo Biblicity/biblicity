@@ -35,7 +35,7 @@ class UserSignup(UserHandler):
                         name=c.get_argument('user_name'),
                         bio=c.get_argument('user_bio'))
                 agreed = c.get_argument('user_agreed', default='')
-                if agreed.lower() not in ['on', 'true', '1']:
+                if False and agreed.lower() not in ['on', 'true', '1']:
                     raise ValueError("You must agree to the terms of service to register.")
                 else:
                     log.info("Register new user: %s" % c.get_argument('user_email'))
@@ -63,9 +63,11 @@ class UserSignup(UserHandler):
             c.save_session()
 
             # redirect to the user's new account
-            url = '/'.join([c.config.Site.url, 'user', user.id_slash_name])
-            log.info("Signup completed successfully, redirecting to %s" % url)
-            c.redirect(str(url))
+            # url = '/'.join([c.config.Site.url, 'user', user.id_slash_name])
+            # log.info("Signup completed successfully, redirecting to %s" % url)
+            # c.redirect(str(url))
+
+            c.render('user/signup-completed.xhtml')
 
         except:
             cursor.connection.rollback()
@@ -77,6 +79,8 @@ class UserSignup(UserHandler):
 
             # -- log the error
             log.info("ERROR:", traceback.format_exc())
+
+            c.write_error(500)
 
             # -- send an error email to the dev team to see what needs to be done, if anything 
             

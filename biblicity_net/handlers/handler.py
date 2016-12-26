@@ -26,3 +26,8 @@ class Handler(bweb.handler.Handler):
     def on_finish(c):                   # logging
         c.save_session()
 
+    def write_error(c, status_code, **kwargs):
+        c.set_status(status_code)
+        c.render("http_error.xhtml", status=status_code)
+
+
