@@ -6,6 +6,9 @@ from bl.string import String
 import bweb.models.user
 
 class User(bweb.models.user.User):
+
+    def authenticate(self, email, password):
+        return bweb.models.user.User.authenticate(self, email, password, unverified=True, upgrade=True)
     
     def before_insert(self):
         """create the id for the user from their email address when their account is created.
