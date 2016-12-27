@@ -36,3 +36,4 @@ if reading != "":
         tfn = os.path.join(SAVE_PATH, version+'.html')
         t = Text(fn=tfn, text=etree.tounicode(div))
         t.write()
+        log.info(tfn)
