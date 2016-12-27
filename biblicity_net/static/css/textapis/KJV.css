@@ -1,0 +1,657 @@
+
+@import "nltapi.css"
+
+/* == KJV TEXT == */
+
+div.KJV  {
+    font-family: serif;
+}
+
+div.KJV .text-critical-ital {
+    font-style: italic;
+}
+
+div.KJV .cn {
+    vertical-align: top;
+    font-size: 70%;
+    font-weight: bold;
+}
+
+div.KJV .ital {
+    font-style: italic;
+}
+
+div.KJV .psa-title-sc {
+    text-transform: uppercase;
+    font-size: 80%;
+}
+
+div.KJV .red {
+    color: #8B0000;
+}
+
+div.KJV .red-ital {
+    font-style: italic;
+    color: #8B0000;
+}
+
+div.KJV .red-sc {
+    text-transform: uppercase;
+    font-size: 80%;
+    color: #8B0000;
+}
+
+div.KJV .sc {
+    font-variant: small-caps;
+}
+
+div.KJV .sc-ital {
+    text-transform: uppercase;
+    font-size: 80%;
+    font-style: italic;
+}
+
+div.KJV .subhead-ital {
+    font-style: italic;
+}
+
+div.KJV .subhead-sc {
+    text-transform: uppercase;
+    font-size: 80%;
+}
+
+div.KJV .tc-ital {
+    font-style: italic;
+}
+
+div.KJV .vn {
+    vertical-align: text-top;
+    font-size: 70%;
+    padding-right: .1em;
+}
+
+div.KJV .vnfig-1digit {
+    display: none;
+}
+
+div.KJV .sub {
+    vertical-align: bottom;
+    font-size: 75%;
+}
+
+div.KJV .sup {
+    vertical-align: top;
+    font-size: 75%;
+}
+
+div.KJV a {}
+
+div.KJV a.book {}
+div.KJV a.chapter {}
+
+div.KJV a.tr {
+    text-decoration: none;
+}
+
+div.KJV a.verse {}
+
+div.KJV div.chapter {}
+
+div.KJV div.toc p {
+    line-height: 1.5;
+}
+
+div.KJV i {}
+
+div.KJV p {
+    margin: 0 0 0 0;
+}
+
+div.KJV p.body {
+    text-indent: 1em;
+}
+
+div.KJV p.body-ch, 
+div.KJV p.body-ch-hd,
+div.KJV p.body-fl,
+div.KJV p.body-hd {
+    text-indent: 0;
+}
+
+div.KJV p.body-fl-sp {
+    margin-top: .5em;
+    text-indent: 0;
+}
+
+div.KJV p.body-sp {
+    margin-top: .5em;
+    text-indent: 1em;
+}
+
+div.KJV p.chapter-number {
+    float: left;
+    padding-right: 0.5ex;
+    text-indent: 0;
+    vertical-align: top;
+    line-height: 1.0;
+    text-indent: 0;
+    font-size: 300%;
+    font-weight: normal;
+}
+
+div.KJV a.chapter-number {
+    font-size: 150%;
+}
+
+div.KJV a.chapter-number-book {
+    font-size: 150%;
+}
+
+div.KJV p.chapter-number .tr {
+    vertical-align: super;
+}
+
+div.KJV p.chapter-number a:link {
+    text-decoration: none;
+}
+
+div.KJV p.chapter-number a.tr:link {
+    text-decoration: underline;
+}
+
+div.KJV p.ext-body {
+    margin-left: 1em;
+    text-indent: 1em;
+}
+
+div.KJV p.ext-body-ch,
+div.KJV p.ext-body-fl {
+    margin-left: 1em;
+    text-indent: 0;
+}
+
+div.KJV p.ext-body-fl-sp {
+    margin-top: .5em;
+    margin-left: 1em;
+    text-indent: 0;
+}
+
+div.KJV p.ext-body-sp {
+    margin-top: .5em;
+    margin-left: 1em;
+    text-indent: 1em;
+}
+
+div.KJV p.ext-hanging,
+div.KJV p.ext-hanging-ch {
+    margin-left: 1em;
+    text-indent: -1em;
+}
+
+div.KJV p.ext-hanging-sp {
+    margin-top: .5em;
+    margin-left: 1em;
+    text-indent: -1em;
+}
+
+div.KJV p.ext-list {
+    margin-left: 2em;
+    text-indent: -1em;
+}
+
+div.KJV p.ext-list-vn {
+    margin-left: 2em;
+    text-indent: -1.25em;
+}
+
+div.KJV p.ext-poet1 {
+    margin-left: 4em;
+    text-indent: -2em;
+}
+
+div.KJV p.ext-poet1-sp {
+    margin-top: .5em;
+    margin-left: 4em;
+    text-indent: -2em;
+}
+
+div.KJV p.ext-poet1-vn {
+    margin-left: 4em;
+    text-indent: -2.25em;
+}
+
+div.KJV p.ext-poet1-vn-sp {
+    margin-top: .5em;
+    margin-left: 4em;
+    text-indent: -2.25em;
+}
+
+div.KJV p.ext-poet2 {
+    margin-left: 4em;
+    text-indent: -1em;
+}
+
+div.KJV p.h1 {
+    text-indent: 0;
+    font-family: serif;
+    font-size: 150%;
+}
+
+div.KJV p.list {
+    margin-left: 2em;
+    text-indent: -1em;
+}
+
+div.KJV p.list-sp {
+    margin-top: .5em;
+    margin-left: 2em;
+    text-indent: -1em;
+}
+
+div.KJV p.list-vn {
+    margin-left: 1.5em;
+    text-indent: -1.25em;
+}
+
+div.KJV p.list-vn-sp {
+    margin-top: .5em;
+    margin-left: 1.5em;
+    text-indent: -1.25em;
+}
+
+div.KJV p.poet-fr {
+    margin-left: 5em;
+    text-align: right;
+    font-style: italic;
+}
+
+div.KJV p.poet1 {
+    margin-left: 3em;
+    text-indent: -2em;
+}
+
+div.KJV p.poet1-sp {
+    margin-top: .5em;
+    margin-left: 3em;
+    text-indent: -2em;
+}
+
+div.KJV p.poet1-vn, 
+div.KJV p.poet1-vn-ch {
+    margin-left: 3em;
+    text-indent: -2.25em;
+}
+
+div.KJV p.poet1-vn-sp {
+    margin-top: .5em;
+    margin-left: 3em;
+    text-indent: -2.25em;
+}
+
+div.KJV p.poet2 {
+    margin-left: 3em;
+    text-indent: -1em;
+}
+
+div.KJV p.poet2-vn {
+    margin-left: 3em;
+    text-indent: -1.25em;
+}
+
+div.KJV p.poet3 {
+    margin-left: 4em;
+    text-indent: -1em;
+}
+
+div.KJV p.psa-book {
+    margin-top: 1em;
+    text-indent: 0;
+    font-style: italic;
+    font-weight: bold;
+}
+
+div.KJV p.psa-hebrew {
+    margin-top: .5em;
+    text-indent: 0;
+    font-style: italic;
+}
+
+div.KJV p.psa-title {
+    text-indent: 0;
+    font-style: italic;
+}
+
+div.KJV p.rule {
+    margin: 1em 2em 0 2em;
+    border-top: 1px solid black;
+    width: 50%;
+    text-align: center;
+    text-indent: 0;
+}
+
+div.KJV p.selah {
+    text-align: right;
+    text-indent: 0;
+    font-style: italic;
+}
+
+div.KJV p.sos-speaker {
+    margin-top: .5em;
+    text-indent: 0;
+    font-style: italic;
+}
+
+div.KJV p.subhead {
+    margin-top: .5em;
+    margin-left: 0;
+    text-indent: 0;
+    font-style: italic;
+    font-weight: bold;
+}
+
+div.KJV p.text-critical {
+    margin-top: 1em;
+    text-align: center;
+    text-indent: 0;
+}
+
+div.KJV table {
+    margin-top: .5em;
+}
+
+div.KJV table p {
+    line-height: 1.0;
+}
+
+div.KJV th {
+    font-weight: normal;
+    font-style: italic;
+}
+
+div.KJV table.col2a {
+    margin-top: 0;
+    margin-left: .5em;
+}
+
+div.KJV table.col2a-sp {
+    margin-top: .5em;
+    margin-left: .5em;
+}
+
+div.KJV table.col2b-sp {
+    margin-top: .5em;
+    margin-left: .5em;
+}
+
+div.KJV table.col3-sp {
+    margin-top: .5em;
+    margin-left: .5em;
+}
+
+div.KJV table.ext-col2a {
+    margin-left: 1em;
+}
+
+div.KJV td {
+    padding: 0 .5em 0 0;
+}
+
+div.KJV th {
+    font-style: italic;
+}
+
+div.KJV tr {}
+
+/* == KJV FRONT MATTER == */
+
+div.KJV-Front .cap {
+    text-transform: uppercase;
+}
+
+div.KJV-Front .cap-ital {
+    text-transform: uppercase;
+    font-style: italic;
+}
+
+div.KJV-Front .sr-trans {
+    font-weight: bold;
+}
+
+div.KJV-Front p {
+    margin: 0;
+    text-indent: 1em;
+}
+
+div.KJV-Front p.body-1 {
+    margin-left: 1em;
+    text-indent: 1em;
+}
+
+div.KJV-Front p.body-fl {
+    text-indent: 0;
+}
+
+div.KJV-Front p.body-first {
+    margin-top: 12pt;
+    text-indent: 0;
+}
+
+div.KJV-Front p.body-fl-sp {
+    margin-top: 9pt;
+    text-indent: 0;
+}
+
+div.KJV-Front p.h1 {
+    margin-top: 12pt;
+    text-indent: 0;
+    text-transform: uppercase;
+    font-weight: bold;
+    font-family: sans-serif;
+}
+
+div.KJV-Front p.h2 {
+    margin-top: 9pt;
+    text-indent: 0;
+    font-weight: bold;
+    font-family: sans-serif;
+}
+
+div.KJV-Front p.h3 {
+    margin-top: 9pt;
+    text-indent: 0;
+    font-style: italic;
+    font-family: sans-serif;
+}
+
+div.KJV-Front p.h2-KJV-intro {
+    margin-top: 9pt;
+    text-indent: 0;
+    font-style: italic;
+}
+
+div.KJV-Front p.h1-team {
+    margin-top: 24pt;
+    text-indent: 0;
+    font-weight: bold;
+}
+
+div.KJV-Front p.h2-team {
+    margin-top: 9pt;
+    text-indent: 0;
+}
+
+div.KJV-Front p.list {
+    margin-left: 1em;
+    text-indent: -1em;
+}
+
+div.KJV-Front p.list-sp {
+    margin-top: 9pt;
+    margin-left: 1em;
+    text-indent: -1em;
+}
+
+div.KJV-Front p.signature {
+    margin-top: 9pt;
+    text-indent: 0;
+    text-align: right;
+}
+
+div.KJV-Front p.supertitle {
+    text-indent: 0;
+}
+
+div.KJV-Front p.td {
+    text-indent: 0;
+}
+
+div.KJV-Front p.td-1 {
+    margin-top: 6pt;
+    text-indent: 0;
+}
+
+div.KJV-Front p.td-h1 {
+    margin-top: 6pt;
+    text-indent: 0;
+    font-weight: bold;
+}
+
+div.KJV-Front p.td-h2 {
+    margin-top: 6pt;
+    text-indent: 0;
+    font-style: italic;
+}
+
+div.KJV-Front p.title {
+    margin-top: 24pt;
+    margin-bottom: 12pt;
+    text-indent: 0;
+    font-size: 150%;
+}
+
+div.KJV-Front p.title-1 {
+    margin-top: 24pt;
+    text-indent: 0;
+    font-size: 150%;
+}
+
+div.KJV-Front p.title-2 {
+    margin-bottom: 12pt;
+    text-indent: 0;
+    font-size: 150%;
+}
+
+div.KJV-Front .sc {
+    font-size: 80%;
+    text-transform: uppercase;
+}
+
+div.KJV-Front table {}
+
+div.KJV-Front td {}
+
+div.KJV-Front tr {}
+
+div.KJV-Front ul {}
+
+/* == KJV TEXT NOTES == */
+
+div.KJV-TextNote  {
+    margin-top: 6pt;
+}
+
+div.KJV-TextNote a.tn-ref {
+    font-weight: bold;
+}
+
+div.KJV-TextNote i {}
+
+div.KJV-TextNote p.dn {
+    text-indent: 0;
+}
+
+div.KJV-TextNote p {
+    margin-left: 2.5em;
+    text-indent: -2.5em;
+}
+
+div.KJV-TextNote p.tn {
+    text-indent: 0;
+}
+
+div.KJV-TextNote span.tn-ital {
+    font-style: italic;
+}
+
+div.KJV-TextNote span.tn-ref-bold-sc {
+    font-weight: bold;
+    font-size: 80%;
+    text-transform: uppercase;
+}
+
+div.KJV-TextNote span.tn-sc {
+    font-size: 80%;
+    text-transform: uppercase;
+}
+
+div.KJV-TextNote span.tn-sc-ital {
+    font-style: italic;
+    font-size: 80%;
+    text-transform: uppercase;
+}
+
+div.KJV-TextNote span.tn-vn {
+    vertical-align: text-top;
+    font-size: 75%;
+}
+
+div.KJV-TextNote sub {
+    vertical-align: bottom;
+    font-size: 75%;
+}
+
+div.KJV-TextNote sup {
+    vertical-align: top;
+    font-size: 75%;
+}
+
+/* == FRACTIONS == */
+
+/* numerator */
+span.fract-num {
+    vertical-align: top;
+    font-size: 75%;
+}
+
+/* denominator */
+span.fract-den {
+    vertical-align: bottom;
+    font-size: 75%;
+}
+
+/* separator */
+span.fract-sep {
+    font-style: italic;
+}
+
+/* numerator */
+span.tn-fract-ital-num {
+    vertical-align: top;
+    margin-right: -.1em;
+    font-size: 75%;
+    font-style: italic;
+}
+
+/* denominator */
+span.tn-fract-ital-den {
+    vertical-align: bottom;
+    margin-left: -.1em;
+    font-size: 75%;
+    font-style: italic;
+}
+
+/* separator */
+span.tn-fract-ital-sep {
+    font-style: italic;
+}
+

@@ -1,0 +1,759 @@
+
+@import "nltapi.css"
+
+/* == NTV TEXT == */
+
+div.NTV  {
+	font-family: serif;
+	line-height: 1.33;
+}
+
+div.NTV .text-critical-ital {
+	font-style: italic;
+}
+
+div.NTV .cn {
+	vertical-align: top;
+	font-size: 70%;
+	font-weight: bold;
+}
+
+div.NTV .ital {
+	font-style: italic;
+}
+
+div.NTV .psa-title-sc {
+	text-transform: uppercase;
+	font-size: 80%;
+}
+
+div.NTV .red {
+    color: #8B0000;
+}
+
+div.NTV .red-ital {
+	font-style: italic;
+    color: #8B0000;
+}
+
+div.NTV .red-sc {
+	text-transform: uppercase;
+	font-size: 80%;
+    color: #8B0000;
+}
+
+div.NTV .sc {
+	font-variant: small-caps;
+}
+
+div.NTV .sc-ital {
+	text-transform: uppercase;
+	font-size: 80%;
+	font-style: italic;
+}
+
+div.NTV .subhead-ital {
+	font-style: italic;
+}
+
+div.NTV .subhead-sc {
+	text-transform: uppercase;
+	font-size: 80%;
+}
+
+div.NTV .tc-ital {
+	font-style: italic;
+}
+
+div.NTV .vn {
+	vertical-align: text-top;
+	font-size: 70%;
+	padding-right: .1em;
+}
+
+div.NTV .vnfig-1digit {
+	display: none;
+}
+
+div.NTV .sub {
+	vertical-align: bottom;
+	font-size: 75%;
+}
+
+div.NTV .sup {
+	vertical-align: top;
+	font-size: 75%;
+}
+
+div.NTV a {}
+
+div.NTV a.book {}
+div.NTV a.chapter {}
+
+div.NTV a.tr {
+	text-decoration: none;
+}
+
+div.NTV a.verse {}
+
+div.NTV div.chapter {}
+
+div.NTV div.toc p {
+	line-height: 1.5;
+}
+
+div.NTV i {}
+
+div.NTV p {
+	margin: 0 0 0 0;
+}
+
+div.NTV p.body {
+	text-indent: 1em;
+}
+
+div.NTV p.body-ch, 
+div.NTV p.body-ch-hd,
+div.NTV p.body-fl,
+div.NTV p.body-hd {
+	text-indent: 0;
+}
+
+div.NTV p.body-fl-sp {
+	margin-top: .5em;
+	text-indent: 0;
+}
+
+div.NTV p.body-sp {
+	margin-top: .5em;
+	text-indent: 1em;
+}
+
+div.NTV p.chapter-number {
+	float: left;
+	padding-right: 0.5ex;
+	text-indent: 0;
+	vertical-align: top;
+	line-height: 1.0;
+	text-indent: 0;
+	font-size: 300%;
+	font-weight: normal;
+}
+
+div.NTV a.chapter-number {
+	font-size: 150%;
+}
+
+div.NTV a.chapter-number-book {
+	font-size: 150%;
+}
+
+div.NTV p.chapter-number .tr {
+	vertical-align: super;
+}
+
+div.NTV p.chapter-number a:link {
+	text-decoration: none;
+}
+
+div.NTV p.chapter-number a.tr:link {
+	text-decoration: underline;
+}
+
+div.NTV p.ext-body {
+	margin-left: 1em;
+	text-indent: 1em;
+}
+
+div.NTV p.ext-body-ch,
+div.NTV p.ext-body-fl {
+	margin-left: 1em;
+	text-indent: 0;
+}
+
+div.NTV p.ext-body-fl-sp {
+	margin-top: .5em;
+	margin-left: 1em;
+	text-indent: 0;
+}
+
+div.NTV p.ext-body-sp {
+	margin-top: .5em;
+	margin-left: 1em;
+	text-indent: 1em;
+}
+
+div.NTV p.ext-hanging,
+div.NTV p.ext-hanging-ch {
+	margin-left: 1em;
+	text-indent: -1em;
+}
+
+div.NTV p.ext-hanging-sp {
+	margin-top: .5em;
+	margin-left: 1em;
+	text-indent: -1em;
+}
+
+div.NTV p.ext-list {
+	margin-left: 2em;
+	text-indent: -1em;
+}
+
+div.NTV p.ext-list-vn {
+	margin-left: 2em;
+	text-indent: -1.25em;
+}
+
+div.NTV p.ext-poet1 {
+	margin-left: 4em;
+	text-indent: -2em;
+}
+
+div.NTV p.ext-poet1-sp {
+	margin-top: .5em;
+	margin-left: 4em;
+	text-indent: -2em;
+}
+
+div.NTV p.ext-poet1-vn {
+	margin-left: 4em;
+	text-indent: -2.25em;
+}
+
+div.NTV p.ext-poet1-vn-sp {
+	margin-top: .5em;
+	margin-left: 4em;
+	text-indent: -2.25em;
+}
+
+div.NTV p.ext-poet2 {
+	margin-left: 4em;
+	text-indent: -1em;
+}
+
+div.NTV p.h1 {
+	text-indent: 0;
+	font-family: serif;
+	font-size: 150%;
+}
+
+div.NTV p.list {
+	margin-left: 2em;
+	text-indent: -1em;
+}
+
+div.NTV p.list-sp {
+	margin-top: .5em;
+	margin-left: 2em;
+	text-indent: -1em;
+}
+
+div.NTV p.list-vn {
+	margin-left: 1.5em;
+	text-indent: -1.25em;
+}
+
+div.NTV p.list-vn-sp {
+	margin-top: .5em;
+	margin-left: 1.5em;
+	text-indent: -1.25em;
+}
+
+div.NTV p.poet-fr {
+	margin-left: 5em;
+	text-align: right;
+	font-style: italic;
+}
+
+div.NTV p.poet1 {
+	margin-left: 3em;
+	text-indent: -2em;
+}
+
+div.NTV p.poet1-sp {
+	margin-top: .5em;
+	margin-left: 3em;
+	text-indent: -2em;
+}
+
+div.NTV p.poet1-vn, 
+div.NTV p.poet1-vn-ch {
+	margin-left: 3em;
+	text-indent: -2.25em;
+}
+
+div.NTV p.poet1-vn-sp {
+	margin-top: .5em;
+	margin-left: 3em;
+	text-indent: -2.25em;
+}
+
+div.NTV p.poet2 {
+	margin-left: 3em;
+	text-indent: -1em;
+}
+
+div.NTV p.poet2-vn {
+	margin-left: 3em;
+	text-indent: -1.25em;
+}
+
+div.NTV p.poet3 {
+	margin-left: 4em;
+	text-indent: -1em;
+}
+
+div.NTV p.psa-book {
+	margin-top: 1em;
+	text-indent: 0;
+	font-style: italic;
+	font-weight: bold;
+}
+
+div.NTV p.psa-hebrew {
+	margin-top: .5em;
+	text-indent: 0;
+	font-style: italic;
+}
+
+div.NTV p.psa-title {
+	text-indent: 0;
+	font-style: italic;
+}
+
+div.NTV p.rule {
+	margin: 1em 2em 0 2em;
+	border-top: 1px solid black;
+	width: 50%;
+	text-align: center;
+	text-indent: 0;
+}
+
+div.NTV p.selah {
+	text-align: right;
+	text-indent: 0;
+	font-style: italic;
+}
+
+div.NTV p.sos-speaker {
+	margin-top: .5em;
+	text-indent: 0;
+	font-style: italic;
+}
+
+div.NTV p.subhead {
+	margin-top: .5em;
+	margin-left: 0;
+	text-indent: 0;
+	font-style: italic;
+	font-weight: bold;
+}
+
+div.NTV p.text-critical {
+	margin-top: 1em;
+	text-align: center;
+	text-indent: 0;
+}
+
+div.NTV table {
+	margin-top: .5em;
+}
+
+div.NTV table p {
+	line-height: 1.0;
+}
+
+div.NTV th {
+	font-weight: normal;
+	font-style: italic;
+}
+
+div.NTV table.col2a {
+	margin-top: 0;
+	margin-left: .5em;
+}
+
+div.NTV table.col2a-sp {
+	margin-top: .5em;
+	margin-left: .5em;
+}
+
+div.NTV table.col2b-sp {
+	margin-top: .5em;
+	margin-left: .5em;
+}
+
+div.NTV table.col3-sp {
+	margin-top: .5em;
+	margin-left: .5em;
+}
+
+div.NTV table.ext-col2a {
+	margin-left: 1em;
+}
+
+div.NTV td {
+	padding: 0 .5em 0 0;
+}
+
+div.NTV th {
+	font-style: italic;
+}
+
+div.NTV tr {}
+
+/* == NTV FRONT MATTER == */
+
+div.NTV-Front .cap {
+	text-transform: uppercase;
+}
+
+div.NTV-Front .cap-ital {
+	text-transform: uppercase;
+	font-style: italic;
+}
+
+div.NTV-Front .sr-trans {
+	font-weight: bold;
+}
+
+div.NTV-Front p {
+	margin: 0;
+	text-indent: 1em;
+}
+
+div.NTV-Front p.body-1 {
+	margin-left: 1em;
+	text-indent: 1em;
+}
+
+div.NTV-Front p.body-fl {
+	text-indent: 0;
+}
+
+div.NTV-Front p.body-first {
+	margin-top: 12pt;
+	text-indent: 0;
+}
+
+div.NTV-Front p.body-fl-sp {
+	margin-top: 9pt;
+	text-indent: 0;
+}
+
+div.NTV-Front p.h1 {
+	margin-top: 12pt;
+	text-indent: 0;
+	text-transform: uppercase;
+	font-weight: bold;
+	font-family: sans-serif;
+}
+
+div.NTV-Front p.h2 {
+	margin-top: 9pt;
+	text-indent: 0;
+	font-weight: bold;
+	font-family: sans-serif;
+}
+
+div.NTV-Front p.h3 {
+	margin-top: 9pt;
+	text-indent: 0;
+	font-style: italic;
+	font-family: sans-serif;
+}
+
+div.NTV-Front p.h2-ntv-intro {
+	margin-top: 9pt;
+	text-indent: 0;
+	font-style: italic;
+}
+
+div.NTV-Front p.h1-team {
+	margin-top: 24pt;
+	text-indent: 0;
+	font-weight: bold;
+}
+
+div.NTV-Front p.h2-team {
+	margin-top: 9pt;
+	text-indent: 0;
+}
+
+div.NTV-Front p.list {
+	margin-left: 1em;
+	text-indent: -1em;
+}
+
+div.NTV-Front p.list-sp {
+	margin-top: 9pt;
+	margin-left: 1em;
+	text-indent: -1em;
+}
+
+div.NTV-Front p.signature {
+	margin-top: 9pt;
+	text-indent: 0;
+	text-align: right;
+}
+
+div.NTV-Front p.supertitle {
+	text-indent: 0;
+}
+
+div.NTV-Front p.td {
+	text-indent: 0;
+}
+
+div.NTV-Front p.td-1 {
+	margin-top: 6pt;
+	text-indent: 0;
+}
+
+div.NTV-Front p.td-h1 {
+	margin-top: 6pt;
+	text-indent: 0;
+	font-weight: bold;
+}
+
+div.NTV-Front p.td-h2 {
+	margin-top: 6pt;
+	text-indent: 0;
+	font-style: italic;
+}
+
+div.NTV-Front p.title {
+	margin-top: 24pt;
+	margin-bottom: 12pt;
+	text-indent: 0;
+	font-size: 150%;
+}
+
+div.NTV-Front p.title-1 {
+	margin-top: 24pt;
+	text-indent: 0;
+	font-size: 150%;
+}
+
+div.NTV-Front p.title-2 {
+	margin-bottom: 12pt;
+	text-indent: 0;
+	font-size: 150%;
+}
+
+div.NTV-Front .sc {
+	font-size: 80%;
+	text-transform: uppercase;
+}
+
+div.NTV-Front table {}
+
+div.NTV-Front td {}
+
+div.NTV-Front tr {}
+
+div.NTV-Front ul {}
+
+
+/* Index */
+
+div.Index  {}
+
+div.Index a {}
+
+div.Index p.h1 {
+	margin-top: 1em;
+	text-indent: 0;
+	font-weight: bold;
+}
+
+div.Index p.title {
+	margin-top: 1em;
+	margin-bottom: .5em;
+	text-indent: 0;
+	font-weight: bold;
+	font-size: 150%;
+}
+
+div.Index p.toc {
+	margin-top: .25em;
+	text-indent: 0;
+}
+
+/* ConcEntry */
+
+div.ConcEntry  {
+	font-family: sans-serif;
+}
+
+div.ConcEntry a {}
+
+div.ConcEntry p.conc-also {
+	text-indent: 0;
+}
+
+div.ConcEntry p.conc-def-list {
+	margin-left: 1em;
+	text-indent: -1em;
+}
+
+div.ConcEntry p.conc-def-fl {
+	text-indent: 0;
+}
+
+div.ConcEntry p.conc-entry,
+div.ConcEntry p.conc-head {
+	margin-top: .5em;
+	text-indent: 0;
+}
+
+div.ConcEntry p.conc-kjv {
+	margin-top: .5em;
+	text-indent: 0;
+	font-weight: bold;
+}
+
+
+div.ConcEntry p.list {
+	margin-left: 1em;
+	text-indent: -1em;
+}
+
+div.ConcEntry span.ce {
+	font-weight: bold;
+}
+
+div.ConcEntry span.conc-head {
+	font-weight: bold;
+}
+
+div.ConcEntry span.italic-character {
+	font-style: italic;
+}
+
+div.ConcEntry span.ks {
+	font-weight: bold;
+}
+
+div.ConcEntry span.ks-sc {
+	text-transform: uppercase;
+	font-size: 80%;
+	font-weight: bold;
+}
+
+div.ConcEntry span.ord {
+	text-transform: uppercase;
+	font-size: 80%;
+}
+
+div.ConcEntry span.sc {
+	text-transform: uppercase;
+	font-size: 80%;
+}
+
+div.ConcEntry span.smallcaps {
+	font-variant: small-caps;
+}
+
+/* == NTV TEXT NOTES == */
+
+div.NTV-TextNote  {
+	margin-top: 6pt;
+}
+
+div.NTV-TextNote a.tn-ref {
+	font-weight: bold;
+}
+
+div.NTV-TextNote i {}
+
+div.NTV-TextNote p.dn {
+	text-indent: 0;
+}
+
+div.NTV-TextNote p {
+	margin-left: 2.5em;
+	text-indent: -2.5em;
+}
+
+div.NTV-TextNote p.tn {
+	text-indent: 0;
+}
+
+div.NTV-TextNote span.tn-ital {
+	font-style: italic;
+}
+
+div.NTV-TextNote span.tn-ref-bold-sc {
+	font-weight: bold;
+	font-size: 80%;
+	text-transform: uppercase;
+}
+
+div.NTV-TextNote span.tn-sc {
+	font-size: 80%;
+	text-transform: uppercase;
+}
+
+div.NTV-TextNote span.tn-sc-ital {
+	font-style: italic;
+	font-size: 80%;
+	text-transform: uppercase;
+}
+
+div.NTV-TextNote span.tn-vn {
+	vertical-align: text-top;
+	font-size: 75%;
+}
+
+div.NTV-TextNote sub {
+	vertical-align: bottom;
+	font-size: 75%;
+}
+
+div.NTV-TextNote sup {
+	vertical-align: top;
+	font-size: 75%;
+}
+
+/* == FRACTIONS == */
+
+/* numerator */
+span.fract-num {
+	vertical-align: top;
+	font-size: 75%;
+}
+
+/* denominator */
+span.fract-den {
+	vertical-align: bottom;
+	font-size: 75%;
+}
+
+/* separator */
+span.fract-sep {
+	font-style: italic;
+}
+
+/* numerator */
+span.tn-fract-ital-num {
+	vertical-align: top;
+	margin-right: -.1em;
+	font-size: 75%;
+	font-style: italic;
+}
+
+/* denominator */
+span.tn-fract-ital-den {
+	vertical-align: bottom;
+	margin-left: -.1em;
+	font-size: 75%;
+	font-style: italic;
+}
+
+/* separator */
+span.tn-fract-ital-sep {
+	font-style: italic;
+}
+

@@ -1,0 +1,657 @@
+
+@import "nltapi.css"
+
+/* == NLT TEXT == */
+
+div.NLTUK  {
+	font-family: serif;
+}
+
+div.NLTUK .text-critical-ital {
+	font-style: italic;
+}
+
+div.NLTUK .cn {
+	vertical-align: top;
+	font-size: 70%;
+	font-weight: bold;
+}
+
+div.NLTUK .ital {
+	font-style: italic;
+}
+
+div.NLTUK .psa-title-sc {
+	text-transform: uppercase;
+	font-size: 80%;
+}
+
+div.NLTUK .red {
+    color: #8B0000;
+}
+
+div.NLTUK .red-ital {
+	font-style: italic;
+    color: #8B0000;
+}
+
+div.NLTUK .red-sc {
+	text-transform: uppercase;
+	font-size: 80%;
+    color: #8B0000;
+}
+
+div.NLTUK .sc {
+	font-variant: small-caps;
+}
+
+div.NLTUK .sc-ital {
+	text-transform: uppercase;
+	font-size: 80%;
+	font-style: italic;
+}
+
+div.NLTUK .subhead-ital {
+	font-style: italic;
+}
+
+div.NLTUK .subhead-sc {
+	text-transform: uppercase;
+	font-size: 80%;
+}
+
+div.NLTUK .tc-ital {
+	font-style: italic;
+}
+
+div.NLTUK .vn {
+	vertical-align: text-top;
+	font-size: 70%;
+	padding-right: .1em;
+}
+
+div.NLTUK .vnfig-1digit {
+	display: none;
+}
+
+div.NLTUK .sub {
+	vertical-align: bottom;
+	font-size: 75%;
+}
+
+div.NLTUK .sup {
+	vertical-align: top;
+	font-size: 75%;
+}
+
+div.NLTUK a {}
+
+div.NLTUK a.book {}
+div.NLTUK a.chapter {}
+
+div.NLTUK a.tr {
+	text-decoration: none;
+}
+
+div.NLTUK a.verse {}
+
+div.NLTUK div.chapter {}
+
+div.NLTUK div.toc p {
+	line-height: 1.5;
+}
+
+div.NLTUK i {}
+
+div.NLTUK p {
+	margin: 0 0 0 0;
+}
+
+div.NLTUK p.body {
+	text-indent: 1em;
+}
+
+div.NLTUK p.body-ch, 
+div.NLTUK p.body-ch-hd,
+div.NLTUK p.body-fl,
+div.NLTUK p.body-hd {
+	text-indent: 0;
+}
+
+div.NLTUK p.body-fl-sp {
+	margin-top: .5em;
+	text-indent: 0;
+}
+
+div.NLTUK p.body-sp {
+	margin-top: .5em;
+	text-indent: 1em;
+}
+
+div.NLTUK p.chapter-number {
+	float: left;
+	padding-right: 0.5ex;
+	text-indent: 0;
+	vertical-align: top;
+	line-height: 1.0;
+	text-indent: 0;
+	font-size: 300%;
+	font-weight: normal;
+}
+
+div.NLTUK a.chapter-number {
+	font-size: 150%;
+}
+
+div.NLTUK a.chapter-number-book {
+	font-size: 150%;
+}
+
+div.NLTUK p.chapter-number .tr {
+	vertical-align: super;
+}
+
+div.NLTUK p.chapter-number a:link {
+	text-decoration: none;
+}
+
+div.NLTUK p.chapter-number a.tr:link {
+	text-decoration: underline;
+}
+
+div.NLTUK p.ext-body {
+	margin-left: 1em;
+	text-indent: 1em;
+}
+
+div.NLTUK p.ext-body-ch,
+div.NLTUK p.ext-body-fl {
+	margin-left: 1em;
+	text-indent: 0;
+}
+
+div.NLTUK p.ext-body-fl-sp {
+	margin-top: .5em;
+	margin-left: 1em;
+	text-indent: 0;
+}
+
+div.NLTUK p.ext-body-sp {
+	margin-top: .5em;
+	margin-left: 1em;
+	text-indent: 1em;
+}
+
+div.NLTUK p.ext-hanging,
+div.NLTUK p.ext-hanging-ch {
+	margin-left: 1em;
+	text-indent: -1em;
+}
+
+div.NLTUK p.ext-hanging-sp {
+	margin-top: .5em;
+	margin-left: 1em;
+	text-indent: -1em;
+}
+
+div.NLTUK p.ext-list {
+	margin-left: 2em;
+	text-indent: -1em;
+}
+
+div.NLTUK p.ext-list-vn {
+	margin-left: 2em;
+	text-indent: -1.25em;
+}
+
+div.NLTUK p.ext-poet1 {
+	margin-left: 4em;
+	text-indent: -2em;
+}
+
+div.NLTUK p.ext-poet1-sp {
+	margin-top: .5em;
+	margin-left: 4em;
+	text-indent: -2em;
+}
+
+div.NLTUK p.ext-poet1-vn {
+	margin-left: 4em;
+	text-indent: -2.25em;
+}
+
+div.NLTUK p.ext-poet1-vn-sp {
+	margin-top: .5em;
+	margin-left: 4em;
+	text-indent: -2.25em;
+}
+
+div.NLTUK p.ext-poet2 {
+	margin-left: 4em;
+	text-indent: -1em;
+}
+
+div.NLTUK p.h1 {
+	text-indent: 0;
+	font-family: serif;
+	font-size: 150%;
+}
+
+div.NLTUK p.list {
+	margin-left: 2em;
+	text-indent: -1em;
+}
+
+div.NLTUK p.list-sp {
+	margin-top: .5em;
+	margin-left: 2em;
+	text-indent: -1em;
+}
+
+div.NLTUK p.list-vn {
+	margin-left: 1.5em;
+	text-indent: -1.25em;
+}
+
+div.NLTUK p.list-vn-sp {
+	margin-top: .5em;
+	margin-left: 1.5em;
+	text-indent: -1.25em;
+}
+
+div.NLTUK p.poet-fr {
+	margin-left: 5em;
+	text-align: right;
+	font-style: italic;
+}
+
+div.NLTUK p.poet1 {
+	margin-left: 3em;
+	text-indent: -2em;
+}
+
+div.NLTUK p.poet1-sp {
+	margin-top: .5em;
+	margin-left: 3em;
+	text-indent: -2em;
+}
+
+div.NLTUK p.poet1-vn, 
+div.NLTUK p.poet1-vn-ch {
+	margin-left: 3em;
+	text-indent: -2.25em;
+}
+
+div.NLTUK p.poet1-vn-sp {
+	margin-top: .5em;
+	margin-left: 3em;
+	text-indent: -2.25em;
+}
+
+div.NLTUK p.poet2 {
+	margin-left: 3em;
+	text-indent: -1em;
+}
+
+div.NLTUK p.poet2-vn {
+	margin-left: 3em;
+	text-indent: -1.25em;
+}
+
+div.NLTUK p.poet3 {
+	margin-left: 4em;
+	text-indent: -1em;
+}
+
+div.NLTUK p.psa-book {
+	margin-top: 1em;
+	text-indent: 0;
+	font-style: italic;
+	font-weight: bold;
+}
+
+div.NLTUK p.psa-hebrew {
+	margin-top: .5em;
+	text-indent: 0;
+	font-style: italic;
+}
+
+div.NLTUK p.psa-title {
+	text-indent: 0;
+	font-style: italic;
+}
+
+div.NLTUK p.rule {
+	margin: 1em 2em 0 2em;
+	border-top: 1px solid black;
+	width: 50%;
+	text-align: center;
+	text-indent: 0;
+}
+
+div.NLTUK p.selah {
+	text-align: right;
+	text-indent: 0;
+	font-style: italic;
+}
+
+div.NLTUK p.sos-speaker {
+	margin-top: .5em;
+	text-indent: 0;
+	font-style: italic;
+}
+
+div.NLTUK p.subhead {
+	margin-top: .5em;
+	margin-left: 0;
+	text-indent: 0;
+	font-style: italic;
+	font-weight: bold;
+}
+
+div.NLTUK p.text-critical {
+	margin-top: 1em;
+	text-align: center;
+	text-indent: 0;
+}
+
+div.NLTUK table {
+	margin-top: .5em;
+}
+
+div.NLTUK table p {
+	line-height: 1.0;
+}
+
+div.NLTUK th {
+	font-weight: normal;
+	font-style: italic;
+}
+
+div.NLTUK table.col2a {
+	margin-top: 0;
+	margin-left: .5em;
+}
+
+div.NLTUK table.col2a-sp {
+	margin-top: .5em;
+	margin-left: .5em;
+}
+
+div.NLTUK table.col2b-sp {
+	margin-top: .5em;
+	margin-left: .5em;
+}
+
+div.NLTUK table.col3-sp {
+	margin-top: .5em;
+	margin-left: .5em;
+}
+
+div.NLTUK table.ext-col2a {
+	margin-left: 1em;
+}
+
+div.NLTUK td {
+	padding: 0 .5em 0 0;
+}
+
+div.NLTUK th {
+	font-style: italic;
+}
+
+div.NLTUK tr {}
+
+/* == NLT FRONT MATTER == */
+
+div.NLTUK-Front .cap {
+	text-transform: uppercase;
+}
+
+div.NLTUK-Front .cap-ital {
+	text-transform: uppercase;
+	font-style: italic;
+}
+
+div.NLTUK-Front .sr-trans {
+	font-weight: bold;
+}
+
+div.NLTUK-Front p {
+	margin: 0;
+	text-indent: 1em;
+}
+
+div.NLTUK-Front p.body-1 {
+	margin-left: 1em;
+	text-indent: 1em;
+}
+
+div.NLTUK-Front p.body-fl {
+	text-indent: 0;
+}
+
+div.NLTUK-Front p.body-first {
+	margin-top: 12pt;
+	text-indent: 0;
+}
+
+div.NLTUK-Front p.body-fl-sp {
+	margin-top: 9pt;
+	text-indent: 0;
+}
+
+div.NLTUK-Front p.h1 {
+	margin-top: 12pt;
+	text-indent: 0;
+	text-transform: uppercase;
+	font-weight: bold;
+	font-family: sans-serif;
+}
+
+div.NLTUK-Front p.h2 {
+	margin-top: 9pt;
+	text-indent: 0;
+	font-weight: bold;
+	font-family: sans-serif;
+}
+
+div.NLTUK-Front p.h3 {
+	margin-top: 9pt;
+	text-indent: 0;
+	font-style: italic;
+	font-family: sans-serif;
+}
+
+div.NLTUK-Front p.h2-nlt-intro {
+	margin-top: 9pt;
+	text-indent: 0;
+	font-style: italic;
+}
+
+div.NLTUK-Front p.h1-team {
+	margin-top: 24pt;
+	text-indent: 0;
+	font-weight: bold;
+}
+
+div.NLTUK-Front p.h2-team {
+	margin-top: 9pt;
+	text-indent: 0;
+}
+
+div.NLTUK-Front p.list {
+	margin-left: 1em;
+	text-indent: -1em;
+}
+
+div.NLTUK-Front p.list-sp {
+	margin-top: 9pt;
+	margin-left: 1em;
+	text-indent: -1em;
+}
+
+div.NLTUK-Front p.signature {
+	margin-top: 9pt;
+	text-indent: 0;
+	text-align: right;
+}
+
+div.NLTUK-Front p.supertitle {
+	text-indent: 0;
+}
+
+div.NLTUK-Front p.td {
+	text-indent: 0;
+}
+
+div.NLTUK-Front p.td-1 {
+	margin-top: 6pt;
+	text-indent: 0;
+}
+
+div.NLTUK-Front p.td-h1 {
+	margin-top: 6pt;
+	text-indent: 0;
+	font-weight: bold;
+}
+
+div.NLTUK-Front p.td-h2 {
+	margin-top: 6pt;
+	text-indent: 0;
+	font-style: italic;
+}
+
+div.NLTUK-Front p.title {
+	margin-top: 24pt;
+	margin-bottom: 12pt;
+	text-indent: 0;
+	font-size: 150%;
+}
+
+div.NLTUK-Front p.title-1 {
+	margin-top: 24pt;
+	text-indent: 0;
+	font-size: 150%;
+}
+
+div.NLTUK-Front p.title-2 {
+	margin-bottom: 12pt;
+	text-indent: 0;
+	font-size: 150%;
+}
+
+div.NLTUK-Front .sc {
+	font-size: 80%;
+	text-transform: uppercase;
+}
+
+div.NLTUK-Front table {}
+
+div.NLTUK-Front td {}
+
+div.NLTUK-Front tr {}
+
+div.NLTUK-Front ul {}
+
+/* == NLT TEXT NOTES == */
+
+div.NLTUK-TextNote  {
+	margin-top: 6pt;
+}
+
+div.NLTUK-TextNote a.tn-ref {
+	font-weight: bold;
+}
+
+div.NLTUK-TextNote i {}
+
+div.NLTUK-TextNote p.dn {
+	text-indent: 0;
+}
+
+div.NLTUK-TextNote p {
+	margin-left: 2.5em;
+	text-indent: -2.5em;
+}
+
+div.NLTUK-TextNote p.tn {
+	text-indent: 0;
+}
+
+div.NLTUK-TextNote span.tn-ital {
+	font-style: italic;
+}
+
+div.NLTUK-TextNote span.tn-ref-bold-sc {
+	font-weight: bold;
+	font-size: 80%;
+	text-transform: uppercase;
+}
+
+div.NLTUK-TextNote span.tn-sc {
+	font-size: 80%;
+	text-transform: uppercase;
+}
+
+div.NLTUK-TextNote span.tn-sc-ital {
+	font-style: italic;
+	font-size: 80%;
+	text-transform: uppercase;
+}
+
+div.NLTUK-TextNote span.tn-vn {
+	vertical-align: text-top;
+	font-size: 75%;
+}
+
+div.NLTUK-TextNote sub {
+	vertical-align: bottom;
+	font-size: 75%;
+}
+
+div.NLTUK-TextNote sup {
+	vertical-align: top;
+	font-size: 75%;
+}
+
+/* == FRACTIONS == */
+
+/* numerator */
+span.fract-num {
+	vertical-align: top;
+	font-size: 75%;
+}
+
+/* denominator */
+span.fract-den {
+	vertical-align: bottom;
+	font-size: 75%;
+}
+
+/* separator */
+span.fract-sep {
+	font-style: italic;
+}
+
+/* numerator */
+span.tn-fract-ital-num {
+	vertical-align: top;
+	margin-right: -.1em;
+	font-size: 75%;
+	font-style: italic;
+}
+
+/* denominator */
+span.tn-fract-ital-den {
+	vertical-align: bottom;
+	margin-left: -.1em;
+	font-size: 75%;
+	font-style: italic;
+}
+
+/* separator */
+span.tn-fract-ital-sep {
+	font-style: italic;
+}
+

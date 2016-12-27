@@ -1,0 +1,194 @@
+/* == Paragraph and character styles used by the NLT API, all translations == */
+
+.BibleText .tn {
+  display: none;
+}
+
+.BibleText {
+  line-height: 1.33;
+}
+
+#top-nav {
+  width: 100%;
+  text-align: right;
+  font-size: 11pt;
+}
+
+#top-nav a {
+  text-decoration: none;
+}
+
+#top-nav a:hover,
+#top-nav a:focus,
+#top-nav a:active {
+  text-decoration: underline;
+}
+
+#top-nav a:link,
+#top-nav a:visited {
+  color: #ca9c42;
+}
+
+#messages .error { color: red; margin: 6pt 0;}
+#messages .warning { color: #663300; margin: 6pt 0;}
+#messages .notice { color: green; margin: 6pt 0;}
+
+#main_body {
+  line-height: 1.33;
+}
+
+#main_body .right { text-align: right;}
+#main_body .float-right {float: right;}
+#main_body .clear-right {clear: right;}
+
+#main_body .bar-graph {
+  background-color: #ca9c42;
+}
+
+#main_body h1, 
+#main_body h2, 
+#main_body h3 {
+	margin: 12pt 0 0 0;
+	padding: 0;
+	font-weight: bold;
+}
+
+#main_body p {
+	margin: 0 0 12pt 0;
+	padding: 0;
+}
+
+#main_body td {
+	vertical-align: top;
+}
+
+#main_body b,
+#main_body strong {
+  font-weight: bold;
+}
+
+#main_body sub {
+  font-size: 75%;
+  vertical-align: baseline;
+}
+
+#main_body sup {
+  font-size: 75%;
+  vertical-align: top;
+}
+
+#main_body pre {
+  overflow: auto;
+  white-space: pre-wrap;       /* css-3 */
+  word-wrap: break-word;
+}
+
+#main_body code,
+#main_body kbd,
+#main_body pre,
+#main_body samp {
+  font-family: monospace;
+}
+
+#main_body table {
+  border-collapse: collapse;
+  border-spacing: 0;
+  margin-bottom: 12pt;
+}
+
+#main_body td,
+#main_body th {
+  vertical-align: top;
+  padding: 0;
+}
+
+#main_body a {
+  text-decoration: none;
+}
+
+#main_body a:hover,
+#main_body a:focus,
+#main_body a:active {
+  text-decoration: underline;
+}
+
+#main_body a:link,
+#main_body a:visited {
+  color: #ca9c42;
+}
+
+#main_body table th {
+  font-weight: bold;
+  text-align: left;
+}
+
+#main_body table th,
+#main_body table td {
+  padding: 3pt 6pt;
+  /*border: 1px solid #ddd;*/
+}
+
+#main_body table.parameters th,
+#main_body table.data th {
+  background-color: #f1e3ba;
+}
+
+#main_body table tr {
+  /*background-color: #fff;*/
+  /*border-top: 1px solid #ccc;*/
+}
+
+#main_body table.data tr:nth-child(2n) {
+  background-color: rgba(241, 227, 186, .3);
+}
+
+#main_body table.parameters {
+  border: 1px solid #f1e3ba;
+}
+
+#main_body table.parameters tr {
+  border-top: 1px solid #f1e3ba;
+}
+
+#main_body table.parameters tr:nth-child(2n) {
+  /*background-color: rgba(241, 227, 186, .3);*/
+}
+
+#main_body input {
+  padding: 6pt;
+  margin: 3pt 3pt 3pt 0 ;
+  font-size: 14pt;
+}
+
+#main_body textarea {
+  padding: 3pt;
+  font-size: 12pt;
+}
+
+#main_body input[type=submit] {
+  background-color: #ca9c42;
+  color: white;
+  /*font-weight: bold;*/
+  border: 1px solid rgba(64,62,62,1.0);
+  border-radius: 10px;
+}
+
+#main_body select {
+  background-color: #f1e3ba;
+  padding: 3pt 6pt;
+}
+
+#main_body input[type=submit]:hover {
+  background-color: rgba(64,62,62,1.0);
+}
+
+#main_body ul, #main_body ol {
+  display: list-item;
+  margin-left: 1em;
+  margin-bottom: 12pt;
+}
+
+#main_body ul li {
+  list-style: square outside;
+  margin-left: 1em;
+}
