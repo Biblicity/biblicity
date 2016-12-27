@@ -1,20 +1,27 @@
 {% extends "layout.xhtml" %}
+{% block stylesheets %}
+		{% set version = c.get_argument('version', 'NLT') %}
+		<link rel="stylesheet" href="{{c.static_url('css/textapis/' + version + '.css')}}"/>
+{% end %}
 {% block main %}
-	<h2><a href="http://biblicity.net">Biblicity.net</a> exists to help people grow in God together through daily Bible reading and shared writings.</h2>
-	<p>If you want to grow spiritually through Bible reading, prayer, and devotional study and reflection, but you find it difficult to do these things on your own, biblicity.net provides a place for you to do these things <em>together</em> with others, so that you can grow with the encouragement and support of the community.</p>
-	<h2>We are starting January 1, 2017.</h2>
-	<p>We have a <a href="/reading-plans/bible-overview">daily Bible reading plan</a> for readers and an opportunity for writers to publish their Bible-oriented writings.</p>
-	<ul>
-		<li>
-			<p><span style="font-size:120%">You can use biblicity.net to read the Bible every day.</span>  Starting on January 1, 2017, the front page of biblicity.net will include the Bible reading for that day. We will be following a Bible Overview Reading Plan that gives an overview of the Bible in one year, reading about one chapter a day, six days a week.</p>
-		</li>
-		<li>
-			<p><span style="font-size:120%">You can use biblicity.net as a platform to share your writings with others.</span>  When you make your writings available on biblicity.net, not only can you share them with your own circle, but they can be considered for publication alongside each day’s Bible reading. Every day in 2017, the front page of biblicity.net will have the passage for the day, followed by the published writings on that passage.</p>
-		</li>
-	</ul>
-	<h2>Our mission is to make biblicity.net the best place on the internet to grow in God together with others.</h2>
-	<p>Please join us, participate, and give us your feedback as we grow in God together.</p>
-	{% if c.session.get('email') is None %}
-		<div class="right"><form method="get" action="/user/signup"><input type="submit" value="Sign Up Now"/></form></div>
-	{% end %}
+	<h1>{{c.re.sub("\b0", "", c.datetime.now().strftime("%B %d"))}}</h1>
+	<p>
+		{% set versions = ['ESV', 'NLT', 'NLTUK', 'NTV', 'KJV'] %}
+		{% for v in versions %}
+			{% if v==version %}{{v}}{% else %}<a href="?version={{v}}">{{v}}</a>{% end if %}
+			{% if v != versions[-1] %} • {% end if %}
+		{% end for %}
+	</p>
+	{% set version = c.get_argument('version', 'NLT') %}
+	{% if version=='ESV' %}
+		{% include "today-2017/ESV.html" %}
+	{% elif version=='NLT' %}
+		{% include "today-2017/NLT.html" %}
+	{% elif version=='NLTUK' %}
+		{% include "today-2017/NLTUK.html" %}
+	{% elif version=='NTV' %}
+		{% include "today-2017/NTV.html" %}
+	{% elif version=='KJV' %}
+		{% include "today-2017/KJV.html" %}
+	{% end if %}
 {% end block %}
