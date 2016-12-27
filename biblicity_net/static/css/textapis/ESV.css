@@ -1,0 +1,91 @@
+
+div.esv h3 {
+	text-align: left;
+	}
+div.esv span.verse-num {
+	font-size: 80%;
+	font-weight: bold;
+	padding-right: .15em;
+	padding-left: .25em;
+	vertical-align: text-top;
+	}
+div.esv span.woc { /* Words of Christ (for red-letter editions) */
+	/* color: #900;*/
+	}
+div.esv span.chapter-num {
+	font-weight: bold;
+	padding-right: .5em;
+	}
+div.esv div.esv-text p {
+	text-indent: 2em;
+	}
+div.esv div.esv-text p.same-paragraph {
+	text-indent: 0;
+	}
+div.esv div.block-indent p {
+	text-indent: 0;
+	padding-left: 2.5em;
+	margin-left: 0;
+	}
+div.esv span.indent {
+	padding-left: 2em;
+	}
+div.esv span.indent-2, span.psalm-doxology-line {
+	padding-left: 4em;
+	}
+div.esv span.declares-line {
+	padding-left: 6em;
+	}
+div.esv span.small-caps {
+	font-variant: small-caps;
+	}
+div.esv span.selah {
+	font-style: italic;
+	margin-left: 1em;
+	}
+div.esv p.extra-space {
+	margin-top: 2em;
+	}
+div.esv div.block-indent span.verse-num, div.block-indent span.woc  {
+	padding-left: 0;
+	}
+div.esv h4 {
+	font-weight: normal;
+	}
+div.esv h4.speaker {
+	padding-left: 10em;
+	font-variant: small-caps;
+	margin-bottom: -1em;
+	}
+div.esv h4.textual-note {
+	font-variant: small-caps;	
+	}
+div.esv h4.psalm-acrostic-title {
+	font-variant: small-caps;
+	}
+div.esv h4.psalm-title {
+
+	}
+div.esv span.footnote {
+	font-size: 80%;
+	padding-right: .5em;
+	padding-left: 0em;
+	vertical-align: text-top;
+	}
+div.esv div.footnotes h3 {
+	margin-top: 0;
+	margin-bottom: 0;
+	}
+div.esv div.footnotes p {
+	text-indent: 0;
+	}
+div.esv span.footnote-ref {
+	font-weight: bold;
+	}
+div.esv p.copyright {
+	text-indent: 0;
+	}
+div.esv object.audio {
+	margin: 0 0 0 10px;
+	padding: 0;
+	}
