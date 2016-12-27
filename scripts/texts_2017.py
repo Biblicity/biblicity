@@ -33,6 +33,11 @@ if reading != "":
         text = text.replace("&nbsp;", "&#x00a0;")
         html = XML(root=text)
         div = html.root.xpath("//div")[0]
+        h2 = div.xpath("//h2")[0]
+        h2.text = h2.text.replace(', '+version, '').strip() + ', '
+        link = etree.fromstring("<a class='caps-small' href='%s'>%s</a>" 
+            % (config.Site.url+"/about/translations#"+version.lower().replace('uk',''), version))
+        h2.insert(0, link)    
         tfn = os.path.join(SAVE_PATH, version+'.html')
         t = Text(fn=tfn, text=etree.tounicode(div))
         t.write()

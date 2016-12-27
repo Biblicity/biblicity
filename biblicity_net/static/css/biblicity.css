@@ -101,6 +101,9 @@ a, a:link, a:visited {
 .right {
 	text-align: right;
 }
+.caps-small {
+	font-size: 75%;
+}
 
 .label {
 	font-size: 80%;
