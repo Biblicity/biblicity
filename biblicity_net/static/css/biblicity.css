@@ -1,8 +1,11 @@
 
+html {
+	font-size: 140%;
+	font-family: "chaparral-pro", sans-serif;
+}
+
 body {
 	text-align: center;
-	font-family: "chaparral-pro", sans-serif;
-	font-size: 16pt;
 }
 
 div#body {
@@ -16,7 +19,7 @@ div#body {
 
 div#head {
 	/*padding-top: 50px;*/
-    font-size: 12pt;
+    font-size: .9rem;
     border-bottom: 1px solid #999;
 }
 
@@ -30,21 +33,21 @@ div#top_nav {
 
 div#main_nav {
 	clear: both;
-	font-size: 14pt;
+	font-size: .9rem;
 	font-family: "chaparral-pro", sans-serif;
 }
 
 div#sub_nav {
 	clear: both;
-	font-size: 14pt;
+	font-size: .9rem;
 	font-family: "chaparral-pro", sans-serif;
 	font-style: italic;
-	margin-left: 14pt;	
+	margin-left: .9rem;	
 }
 
 div#main {
     padding: 1em 0;
-    line-height: 24pt;
+    line-height: 1.5rem;
 }
 
 div#footer {
@@ -52,22 +55,22 @@ div#footer {
     margin-top: 2rem;
     border-top: 1px solid #999;
     padding-top: 0.5rem;
-	font-size: 12pt;
+	font-size: .75rem;
 }
 
 h1, h2, h3, h4 {
-	margin: 24pt 0 12pt 0;
+	margin: 1.5rem 0 .75rem 0;
 	font-family: "chaparral-pro", sans-serif;
 	font-weight: normal;
-	line-height: 1.0;
+	/*line-height: 1.0;*/
 }
 
-h1 { font-size: 225%; }
-h2 { font-size: 150%; }
-h3 { font-size: 110%; }
+h1 { font-size: 2.0rem; }
+h2 { font-size: 1.25rem; }
+h3 { font-size: 1.1rem; font-style: italic; }
 
 p {
-	margin: 0 0 .5em 0;
+	margin: 0 0 .5rem 0;
 }
 
 a, a:link, a:visited {
@@ -114,13 +117,13 @@ a, a:link, a:visited {
 }
 
 .label {
-	font-size: 80%;
+	font-size: .8rem;
 	font-weight: 600;
 	font-family: "chaparral-pro-n6", "chaparral-pro", sans-serif;
 }
 
 .label-light {
-    font-size: 80%;
+    font-size: .8rem;
     font-weight: normal;
     font-family: "chaparral-pro", sans-serif;
 }
@@ -133,9 +136,9 @@ a.editing_icon,
 span.editing_icon {
 	vertical-align: middle;
 	border: 1px solid green;
-	border-radius: 7px;
-	padding: 3px;
-	margin: 5px 5px 5px 0;
+	border-radius: .5rem;
+	padding: .2rem;
+	margin: .25rem .25rem .25rem 0;
 	font-size: 1.0rem;
 }
 
@@ -170,7 +173,7 @@ form input[type="submit"] {
 	height: auto;
 	/*font-size: 2em;*/
 	font-family: sans-serif;
-	font-size: 1.5rem;
+	font-size: 1.25rem;
 	padding: .5em;
 	background-color: green;
 	color: #ffffff;
@@ -207,14 +210,14 @@ td {
 	margin-top: 3rem;
 	border-top: 1px solid #999;
 	font-family: "chaparral-pro", sans-serif;
-	font-size: 12pt;
+	font-size: .75rem;
 	line-height: 1.0;
 }
 
 .byline {
 	margin-bottom: 1em;
 	font-family: "chaparral-pro", sans-serif;
-	font-size: 14pt;
+	font-size: .9rem;
 	font-style: italic;
 }
 
