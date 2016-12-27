@@ -4,7 +4,8 @@
 		<link rel="stylesheet" href="{{c.static_url('css/textapis/' + version + '.css')}}"/>
 {% end %}
 {% block main %}
-	<h1>{{c.re.sub("\b0", "", c.datetime.now().strftime("%B %d"))}}</h1>
+	{% set date = c.re.sub("\b0", "", c.datetime.now().strftime("%B %d")) %}
+	<h1><a href="{{c.config.Site.url}}/reading-plans/2017-reading-plan#{{date.replace(' ', '-')}}">{{date}}</a></h1>
 	<p>
 		{% set versions = ['ESV', 'NLT', 'NLTUK', 'NTV', 'KJV'] %}
 		{% for v in versions %}
