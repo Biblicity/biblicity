@@ -34,6 +34,14 @@ div#main_nav {
 	font-family: "chaparral-pro", sans-serif;
 }
 
+div#sub_nav {
+	clear: both;
+	font-size: 14pt;
+	font-family: "chaparral-pro", sans-serif;
+	font-style: italic;
+	margin-left: 14pt;	
+}
+
 div#main {
     padding: 1em 0;
     line-height: 24pt;
