@@ -1,10 +1,13 @@
 
-@import "nltapi.css"
+.BibleText .tn {
+  display: none;
+}
 
 /* == NLT TEXT == */
 
 div.NLT  {
-	font-family: serif;
+	font-family: "chaparral-pro", serif;
+	line-height: 1.5;
 }
 
 div.NLT .text-critical-ital {
@@ -65,10 +68,10 @@ div.NLT .tc-ital {
 }
 
 div.NLT .vn {
-	vertical-align: text-top;
-	font-size: 75%;
+	vertical-align: top;
+	font-size: 70%;
 	font-weight: bold;
-	padding-right: .1em;
+	padding-right: .25em;
 }
 
 div.NLT .vnfig-1digit {
@@ -234,7 +237,7 @@ div.NLT p.ext-poet2 {
 
 div.NLT p.h1 {
 	text-indent: 0;
-	font-family: serif;
+	font-family: "chaparral-pro", serif;
 	font-size: 150%;
 }
 

@@ -48,17 +48,13 @@ div#footer {
 }
 
 h1, h2, h3, h4 {
-	margin: 36pt 0 12pt 0;
+	margin: 24pt 0 12pt 0;
 	font-family: "chaparral-pro", sans-serif;
 	font-weight: normal;
 	line-height: 1.0;
 }
 
-h2, h3, h4 {
-    margin-top: 1rem;
-}
-
-h1 { font-size: 250%; }
+h1 { font-size: 225%; }
 h2 { font-size: 150%; }
 h3 { font-size: 110%; }
 
@@ -137,9 +133,13 @@ a.editing_icon:hover {
 	color: #fff;
 }
 
-b, strong {
+b, strong, .bold {
 	font-family: "chaparral-pro-n6", "chaparral-pro", sans-serif;
 	font-weight: 600;
+}
+
+.italic {
+	font-style: italic;
 }
 
 form input[type="text"],

@@ -1,11 +1,13 @@
 
-@import "nltapi.css"
+.BibleText .tn {
+  display: none;
+}
 
 /* == NTV TEXT == */
 
 div.NTV  {
-	font-family: serif;
-	line-height: 1.33;
+	font-family: "chaparral-pro", serif;
+	line-height: 1.5;
 }
 
 div.NTV .text-critical-ital {
@@ -66,9 +68,10 @@ div.NTV .tc-ital {
 }
 
 div.NTV .vn {
-	vertical-align: text-top;
+	vertical-align: top;
 	font-size: 70%;
-	padding-right: .1em;
+	font-weight: bold;
+	padding-right: .25em;
 }
 
 div.NTV .vnfig-1digit {
@@ -97,10 +100,6 @@ div.NTV a.tr {
 div.NTV a.verse {}
 
 div.NTV div.chapter {}
-
-div.NTV div.toc p {
-	line-height: 1.5;
-}
 
 div.NTV i {}
 
@@ -234,7 +233,7 @@ div.NTV p.ext-poet2 {
 
 div.NTV p.h1 {
 	text-indent: 0;
-	font-family: serif;
+	font-family: "chaparral-pro", serif;
 	font-size: 150%;
 }
 
