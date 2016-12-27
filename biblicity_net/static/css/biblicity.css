@@ -59,10 +59,9 @@ div#footer {
 }
 
 h1, h2, h3, h4 {
-	margin: 1.5rem 0 .75rem 0;
+	margin: 1.0rem 0 .5rem 0;
 	font-family: "chaparral-pro", sans-serif;
 	font-weight: normal;
-	/*line-height: 1.0;*/
 }
 
 h1 { font-size: 2.0rem; }
@@ -70,7 +69,7 @@ h2 { font-size: 1.25rem; }
 h3 { font-size: 1.1rem; font-style: italic; }
 
 p {
-	margin: 0 0 .5rem 0;
+	margin: .25rem 0 .5rem 0;
 }
 
 a, a:link, a:visited {
@@ -172,7 +171,7 @@ form input[type="submit"] {
 	width: auto;
 	height: auto;
 	/*font-size: 2em;*/
-	font-family: sans-serif;
+	font-family: "chaparral-pro-n6", "chaparral-pro", sans-serif;
 	font-size: 1.25rem;
 	padding: .5em;
 	background-color: green;
