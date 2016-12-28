@@ -1,6 +1,6 @@
 
 [Module] 
-path: /Users/sah/biblicity/biblicity/biblicity
+path: /Users/sah/biblicity/biblicity_net/biblicity_net
 
 [Database]
 adaptor: psycopg2
