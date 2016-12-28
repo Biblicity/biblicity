@@ -33,6 +33,7 @@
 	<div id="top_nav">
 {% block top_nav_content %}
 	{% if c.session.get('email') is None %}
+		<!-- <form method="get" action="{{c.config.Site.url}}/user/signup"><input type="submit" value="Sign Up"/></form> -->
 		<strong><a href="{{c.config.Site.url}}/user/signup">Sign Up</a></strong>
 		<!-- • <a href="{{c.config.Site.url}}/user/login">Login</a> -->
 	{% else %}
@@ -41,7 +42,7 @@
 	{% end %}
 {% end %}
 	</div>
-	<div>&nbsp;</div>
+	<!-- <div>&nbsp;</div> -->
 </div>
 
 <div id="main_nav">
