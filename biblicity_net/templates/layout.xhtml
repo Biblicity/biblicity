@@ -35,10 +35,10 @@
 	{% if c.session.get('email') is None %}
 		<!-- <form method="get" action="{{c.config.Site.url}}/user/signup"><input type="submit" value="Sign Up"/></form> -->
 		<strong><a href="{{c.config.Site.url}}/user/signup">Sign Up</a></strong>
-		<!-- • <a href="{{c.config.Site.url}}/user/login">Login</a> -->
+		<!-- &#x25aa; <a href="{{c.config.Site.url}}/user/login">Login</a> -->
 	{% else %}
 		<!-- <strong><a href="{{c.config.Site.url}}/user/{{c.session.get('user_id') or ''}}/{{str(c.String(c.session.get('user_name') or '').hyphenify())}}">{{c.session.get('user_name') or ''}}</a></strong> -->
-		<!-- • <a href="{{c.config.Site.url}}/user/logout">Logout</a> -->
+		<!-- &#x25aa; <a href="{{c.config.Site.url}}/user/logout">Logout</a> -->
 	{% end %}
 {% end %}
 	</div>
@@ -47,14 +47,14 @@
 
 <div id="main_nav">
 	<a href="{{c.config.Site.url}}">Home</a>
-	 •  <a href="{{c.config.Site.url}}/about">About</a>
-	 •  <a href="{{c.config.Site.url}}/reading-plans/2017-reading-plan">Reading Plan</a>
+	 &#x25aa;  <a href="{{c.config.Site.url}}/about">About</a>
+	 &#x25aa;  <a href="{{c.config.Site.url}}/reading-plans/2017-reading-plan">Reading Plan</a>
 <!-- {% if c.session.get('email') is not None %} -->
 <!-- <a href="{{c.config.Site.url}}/user">
 	<span class="editing_icon"><span class="fa fa-user"></span><span class="fa fa-user"></span></span>
 	Users
 </a> -->
-<!-- &nbsp; • &nbsp; -->
+<!-- &nbsp; &#x25aa; &nbsp; -->
 <!-- <a class="fa fa-plus-circle" href="{{c.config.Site.url}}/items/new" title="Post New Item"></a> -->
 <!-- <a href="{{c.config.Site.url}}/items/new">
 	<span class="fa fa-plus editing_icon"></span> 
@@ -86,6 +86,15 @@
 {% block main %}	
 {% end %}
 </div>	
+
+{% if c.session.get('email') is None and '/user/' not in c.request.path %}
+<div class="right">
+	<form method="get" action="{{c.config.Site.url}}/user/signup">
+		<input type="submit" value="Sign Up Now"/>
+	</form> 
+	<p><a href="{{c.config.Site.url}}/about">Learn More</a> </p>
+</div>
+{% end %}
 
 <div id="footer"><a href="{{c.config.Site.url}}"><img src="{{c.static_url('img/biblicity_icon.png')}}" height="12px"/> {{c.config.Site.name}}</a> Copyright &copy; 2016 by <a href="http://blackearthgroup.com" target="_blank">Black Earth Group</a>. All rights reserved. Biblicity and the Biblicity logo are trademarks of Black Earth Group, Inc.</div>
 
