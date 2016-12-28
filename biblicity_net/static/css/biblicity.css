@@ -168,18 +168,18 @@ form input[type="password"] {
 	height: 2rem;
 	max-width: 25rem;
 	padding: 0 0.5em ;
-	font-size: 1.25rem;
+	font-size: 1.0rem;
 }
 
 form textarea {
-	font-size: 1.25rem;
+	font-size: 1.0rem;
 }
 
 form input[type="submit"] {
 	width: auto;
 	height: auto;
-	/*font-size: 2em;*/
 	font-family: "chaparral-pro-n6", "chaparral-pro", sans-serif;
+	/*font-weight: 600;*/
 	font-size: 1.25rem;
 	padding: .5em;
 	background-color: green;
