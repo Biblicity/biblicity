@@ -23,6 +23,6 @@
 	<h2>Our mission is to make biblicity.net the best place on the internet to grow in God together with others.</h2>
 	<p>Please join us, participate, and give us your feedback as we grow in God together.</p>
 	{% if c.session.get('email') is None %}
-		<div class="right"><form method="get" action="{{c.config.Site.url}}/user/signup"><input type="submit" value="Sign Up Now"/></form></div>
+		<div class="right"><form method="get" action="{{c.config.Site.url}}/user/signup"><input class="label" type="submit" value="Sign Up Now"/></form></div>
 	{% end %}
 {% end block %}
