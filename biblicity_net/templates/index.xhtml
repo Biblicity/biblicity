@@ -10,7 +10,7 @@
 		{% set versions = ['ESV', 'NLT', 'NLTUK', 'NTV', 'KJV'] %}
 		{% for v in versions %}
 			{% if v==version %}{{v}}{% else %}<a href="?version={{v}}">{{v}}</a>{% end if %}
-			{% if v != versions[-1] %} • {% end if %}
+			{% if v != versions[-1] %} &#x25aa; {% end if %}
 		{% end for %}
 	</p>
 	{% set version = c.get_argument('version', 'NLT') %}

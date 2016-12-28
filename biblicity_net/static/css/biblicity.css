@@ -33,6 +33,7 @@ img {
 
 ul {
 	padding-left: 0;
+	list-style-type: square;
 }
 
 li {
@@ -55,7 +56,6 @@ div#sub_nav {
 	clear: left;
 	font-size: .9rem;
 	font-family: "chaparral-pro", sans-serif;
-	font-style: italic;
 	margin-left: .9rem;	
 }
 
