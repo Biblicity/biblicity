@@ -14,15 +14,7 @@
 		{% end for %}
 	</p>
 	{% set version = c.get_argument('version', 'NLT') %}
-	{% if version=='ESV' %}
-		{% include "today-2017/ESV.html" %}
-	{% elif version=='NLT' %}
-		{% include "today-2017/NLT.html" %}
-	{% elif version=='NLTUK' %}
-		{% include "today-2017/NLTUK.html" %}
-	{% elif version=='NTV' %}
-		{% include "today-2017/NTV.html" %}
-	{% elif version=='KJV' %}
-		{% include "today-2017/KJV.html" %}
+	{% if version in versions %}
+		{% raw open(c.config.Module.path+"/templates/today-2017/%s.html" % version, 'rb').read().decode('utf-8') %}
 	{% end if %}
 {% end block %}
