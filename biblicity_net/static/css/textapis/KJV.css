@@ -3,6 +3,10 @@
   display: none;
 }
 
+.BibleText .a-tn {
+    display: none;
+}
+
 /* == KJV TEXT == */
 
 div.KJV  {

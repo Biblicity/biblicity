@@ -3,6 +3,10 @@
   display: none;
 }
 
+.BibleText .a-tn {
+	display: none;
+}
+
 /* == NTV TEXT == */
 
 div.NTV  {
