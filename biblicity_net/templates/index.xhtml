@@ -15,6 +15,11 @@
 	</p>
 	{% set version = c.get_argument('version', 'NLT') %}
 	{% if version in versions %}
-		{% raw open(c.config.Module.path+"/templates/today-2017/%s.html" % version, 'rb').read().decode('utf-8') %}
+		{% set fn = c.config.Module.path+"/templates/today-2017/%s.html" % version %}
+		{% if c.os.path.exists(fn) %}
+		{% raw open(fn, 'rb').read().decode('utf-8') %}
+		{% else %}
+		<h2>Selah</h2>
+		{% end if %}
 	{% end if %}
 {% end block %}
