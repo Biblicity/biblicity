@@ -25,8 +25,11 @@ reading = readings.get(date) or ""
 
 httpclient = HTTPClient()
 
-if reading != "":
-    for version in VERSIONS:
+for version in VERSIONS:
+    tfn = os.path.join(SAVE_PATH, version+'.html')
+    if os.path.exists(tfn):
+        os.remove(tfn)
+    if reading != "":
         url = config.OtherAPI[version.lower()] + reading
         log.info(url)
         text = httpclient.fetch(url).body.decode('utf-8')
@@ -38,7 +41,6 @@ if reading != "":
         link = etree.fromstring("<a class='caps-small' href='%s'>%s</a>" 
             % (config.Site.url+"/about/translations#"+version.lower().replace('uk',''), version))
         h2.insert(0, link)    
-        tfn = os.path.join(SAVE_PATH, version+'.html')
         t = Text(fn=tfn, text=etree.tounicode(div))
         t.write()
         log.info(tfn)
