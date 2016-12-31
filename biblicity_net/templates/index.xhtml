@@ -19,7 +19,8 @@
 		{% if c.os.path.exists(fn) %}
 		{% raw open(fn, 'rb').read().decode('utf-8') %}
 		{% else %}
-		<h2>Selah</h2>
+	<h2 class="italic">Selah</h2>
+	<p>We&#x2019;re taking a short <em>interlude</em> between readings, as in the psalms &#x2014; a pause to rest and reflect. We will be back tomorrow with another reading.</p>
 		{% end if %}
 	{% end if %}
 {% end block %}
