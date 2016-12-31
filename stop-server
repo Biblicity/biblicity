@@ -4,5 +4,5 @@ SCRIPT=`readlink -f "$0"`
 SCRIPT_PATH=`dirname "$SCRIPT"`
 
 # stop the server
-kill -s TERM `cat $SCRIPT_PATH/var/biblicity.app.pid`
-rm $SCRIPT_PATH/var/biblicity.app.pid
+kill -s TERM `cat $SCRIPT_PATH/var/biblicity_net.app.pid`
+rm $SCRIPT_PATH/var/biblicity_net.app.pid
