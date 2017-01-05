@@ -1,14 +1,27 @@
 bcrypt==3.1.1
--e git+https://github.com/Biblicity/biblicity_net.git@a92541dedf302fceddcd6ac3a1b2cc6484d0ee3a#egg=biblicity_net
-bl==0.21.0
+-e git+http://github.com/BlackEarth/bf@9012adfba114f81b5bd77321fbe367f9d1689145#egg=bf
+-e git+https://github.com/Biblicity/biblicity_net@47efa3bb003d5377a2241cd9240188f42a2e45c9#egg=biblicity_net
+-e git+https://github.com/BlackEarth/bl.git@6c97a5845455bedcf5f67b1535e5666f5fdce7d2#egg=bl
 bleach==1.4.3
-bsql==0.9.1
-bweb==0.6.0
+-e git+https://github.com/BlackEarth/bref.git@b9c7144b0c0b566fca6c21f120fa82e7af121a0f#egg=bref
+-e git+https://github.com/BlackEarth/bsql.git@6794e2482afabe9ff2f8b99325a838486d869759#egg=bsql
+-e git+https://github.com/BlackEarth/bweb@bd25ed0320712964deabe7ad57a8557eefd34ae6#egg=bweb
+-e git+https://github.com/BlackEarth/bxml@73603ec4a79ab246d28f5aaff4ab279ccc8f2528#egg=bxml
 cffi==1.8.3
+chardet==2.3.0
+cssselect==1.0.0
+cssutils==1.0.1
+emails==0.5.10
 html5lib==0.9999999
+lxml==3.7.1
 Markdown==2.6.7
 passlib==1.6.5
+premailer==3.0.1
 psycopg2==2.6.2
 pycparser==2.16
+python-dateutil==2.6.0
+requests==2.12.4
+sass==2.3
 six==1.10.0
 tornado==4.4.2
+Unum==4.1.3
