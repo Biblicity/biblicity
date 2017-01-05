@@ -19,7 +19,7 @@
 
 {% if len(user.following) > 0 %}
 <div class="two-col float-right">
-<h2><span class="fa fa-user-plus"></span> Following</h2>
+<h2><span class="fa fa-user-plus icon"></span> Following</h2>
 {% for u in user.following %}
 <p>
 	<strong><a href="{{c.config.Site.url}}/user/{{u.id_slash_name}}">{{u.name}}</a></strong>
