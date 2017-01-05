@@ -156,11 +156,10 @@ a, a:link, a:visited {
 	color: green;
 }
 
-.icon {
-	vertical-align: middle;
+a.icon,
+span.icon {
 	padding: .2rem;
-	margin: .25rem .25rem .25rem 0.5rem;
-	font-size: 0.5rem;
+	font-size: 0.75rem;
 }
 
 a.editing_icon,

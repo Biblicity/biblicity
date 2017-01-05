@@ -135,6 +135,9 @@ class UserView(UserHandler):
         user = User(c.db).select_one(id=id)
         if user is None:
             c.write_error(404)
+#        elif c.session.get('email') is None:
+#            # require user login to view user page
+#            c.redirect(c.config.Site.url + '/user/login')
         else:
             c.render("user/view.xhtml", user=user)
 
