@@ -19,8 +19,8 @@ routes = [
 
     # # == User Management == 
     url(r"^/user/?signup/?" % Patterns, UserSignup),
-    # url(r"^/user/?login/?" % Patterns, UserLogin),
-    # url(r"^/user/?logout/?" % Patterns, UserLogout),
+    url(r"^/user/?login/?" % Patterns, UserLogin),
+    url(r"^/user/?logout/?" % Patterns, UserLogout),
     
     # # == Users == 
     # url(r"^/user/?" % Patterns, UserIndex),
@@ -29,7 +29,7 @@ routes = [
     # url(r"^/user/?(?P<id>%(slug)s)/unfollow/?" % Patterns, UserUnfollow),
     # url(r"^/user/?(?P<id>%(slug)s)/block/?" % Patterns, UserBlock),
     # url(r"^/user/?(?P<id>%(slug)s)/unblock/?" % Patterns, UserUnblock),
-    # url(r"^/user/(?P<id>%(slug)s)/?(?:%(slug)s)?" % Patterns, UserView),    # user name slug can appear at end of url, ignored
+    url(r"^/user/(?P<id>%(slug)s)/?(?:%(slug)s)?" % Patterns, UserView),    # user name slug can appear at end of url, ignored
 
 
     # # == Items == 
