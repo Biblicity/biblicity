@@ -11,3 +11,4 @@ venv
 
 *.pyc
 biblicity_net/templates/today-2017
+nohup.out
