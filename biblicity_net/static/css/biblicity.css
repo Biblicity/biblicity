@@ -160,10 +160,10 @@ a.editing_icon,
 span.editing_icon {
 	vertical-align: middle;
 	border: 1px solid green;
-	border-radius: .5rem;
+	border-radius: .25rem;
 	padding: .2rem;
-	margin: .25rem .25rem .25rem 0;
-	font-size: 1.0rem;
+	margin: .25rem .25rem .25rem 0.5rem;
+	font-size: 0.5rem;
 }
 
 a.editing_icon:hover {
