@@ -83,7 +83,6 @@ class UserSignup(UserHandler):
             c.write_error(500)
 
             # -- send an error email to the dev team to see what needs to be done, if anything 
-            
 
 class UserLogin(UserHandler):
     def get(c, user=None):
