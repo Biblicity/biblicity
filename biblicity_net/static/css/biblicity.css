@@ -92,22 +92,33 @@ a, a:link, a:visited {
 }
 
 .notice {
-	padding: 0 .25em;
+	padding: .5rem 1rem;
 	color: green;
-	border: 1px dotted green;
+	font-size: 0.9rem;
+	background-color: #f0fff0;
+	border: 1px solid green;
+	border-radius: 1rem;
+	margin-top: 1rem;
 }
 
 .warning {
-	padding: 0 .25em;
+	padding: .5rem 1rem;
 	color: brown;
-	background-color: yellow;
-	border: 1px dotted brown;
+	font-size: 0.9rem;
+	background-color: #feffe9;
+	border: 1px solid brown;
+	border-radius: 1rem;
+	margin-top: 1rem;
 }
 
 .error {
-	padding: 0 .25em;
+	padding: .5rem 1rem;
 	color: red;
-	border: 1px dotted red;
+	font-size: 0.9rem;
+	background-color: #ffe9e9;
+	border: 1px solid red;
+	border-radius: 1rem;
+	margin-top: 1rem;
 }
 
 .float-right {
