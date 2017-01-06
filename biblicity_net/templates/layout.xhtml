@@ -35,10 +35,10 @@
 	{% if c.session.get('email') is None %}
 		<!-- <form method="get" action="{{c.config.Site.url}}/user/signup"><input type="submit" value="Sign Up"/></form> -->
 		<strong><a href="{{c.config.Site.url}}/user/signup">Sign Up</a></strong>
-		&#x25aa; <a href="{{c.config.Site.url}}/user/login">Login</a>
+		 &#x25aa;  <a href="{{c.config.Site.url}}/user/login">Login</a>
 	{% else %}
 		<strong><a href="{{c.config.Site.url}}/user/{{c.session.get('user_id') or ''}}/{{str(c.String(c.session.get('user_name') or '').hyphenify())}}">{{c.session.get('user_name') or ''}}</a></strong>
-		&#x25aa; <a href="{{c.config.Site.url}}/user/logout">Logout</a>
+		 &#x25aa;  <a href="{{c.config.Site.url}}/user/logout">Logout</a>
 	{% end %}
 {% end %}
 	</div>
