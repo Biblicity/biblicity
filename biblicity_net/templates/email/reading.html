@@ -1,7 +1,10 @@
 {% extends "email.html" %}
 
 {% block stylesheets %}
-		<link rel="stylesheet" href="{{version + '.css'}}"/>
+		<style type="text/css">
+{% set version_css_fn = c.config.Module.path+'/static/css/textapis/%s.css' % version %}
+{% raw open(version_css_fn, 'rb').read().decode('utf-8') %}
+		</style>
 {% end %}
 
 {% block main %}
