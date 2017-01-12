@@ -10,7 +10,8 @@
 /* == NLT TEXT == */
 
 div.NLT  {
-	font-family: "chaparral-pro", serif;
+    font-family: "chaparral-pro", serif;
+    font-size: 100%;
 	line-height: 1.5;
 }
 
@@ -111,7 +112,7 @@ div.NLT div.toc p {
 
 div.NLT i {}
 
-div.NLT p {
+OAdiv.NLT p {
 	margin: 0 0 0 0;
 }
 

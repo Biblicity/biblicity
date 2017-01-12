@@ -3,7 +3,10 @@
 		<meta charset="utf-8"/>
 		<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"/>
 		<meta name="viewport" content="width=device-width, initial-scale=1"/>
-		<title>{% block title %}{{c.config.Site.name}}: Grow in God together{% end %}</title>		
+		<title>{% block title %}{{c.config.Site.name}}: Grow in God together{% end %}</title>
+		<style type="text/css">
+html {font-size: 22pt;}
+		</style>
 		<style type="text/css">
 {% raw open(c.config.Module.path+'/static/css/biblicity.css', 'rb').read().decode('utf-8') %}
 		</style>
@@ -20,7 +23,7 @@
 {% end %}
 </div>	
 
-<div id="footer"><a href="{{c.config.Site.url}}"><img src="biblicity_icon.png" height="12px"/> {{c.config.Site.name}}</a> Copyright &copy; 2017 by <a href="http://blackearthgroup.com" target="_blank">Black Earth Group</a>. All rights reserved. Biblicity and the Biblicity logo are trademarks of Black Earth Group, Inc.</div>
+<div id="footer"><a href="{{c.config.Site.url}}">{{c.config.Site.name}}</a> Copyright &copy; 2017 by <a href="http://blackearthgroup.com" target="_blank">Black Earth Group</a>. All rights reserved. Biblicity and the Biblicity logo are trademarks of Black Earth Group, Inc.</div>
 
 	</body>
 </html>
