@@ -1,0 +1,13 @@
+{% extends "email.html" %}
+
+{% block stylesheets %}
+		<link rel="stylesheet" href="{{version + '.css'}}"/>
+{% end %}
+
+{% block main %}
+	{% set date = c.datetime.now().strftime("%B %d").replace(" 0", " ") %}
+	{% set versions = ['ESV', 'NLT', 'NLTUK', 'NTV', 'KJV'] %}
+	<h1><a href="{{c.config.Site.url}}/reading-plans/2017-reading-plan#{{date.replace(' ', '-')}}">{{date}}</a></h1>
+	{% set fn = c.config.Module.path+"/templates/today-2017/%s.html" % version %}
+	{% raw open(fn, 'rb').read().decode('utf-8') %}
+{% end block %}

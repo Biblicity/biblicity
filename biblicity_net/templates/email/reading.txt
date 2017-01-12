@@ -1,0 +1,7 @@
+{% extends "email.txt" %}
+
+{% block main %}{% set date = c.datetime.now().strftime("%B %d").replace(" 0", " ") %}{% set versions = ['ESV', 'NLT', 'NLTUK', 'NTV', 'KJV'] %}
+{{date}}
+{% set fn = c.config.Module.path+"/templates/today-2017/%s.html" % version %}
+{% raw open(fn, 'rb').read().decode('utf-8') %}
+{% end block %}
