@@ -5,10 +5,7 @@
 		<meta name="viewport" content="width=device-width, initial-scale=1"/>
 		<title>{% block title %}{{c.config.Site.name}}: Grow in God together{% end %}</title>
 		<style type="text/css">
-html {font-size: 22pt;}
-		</style>
-		<style type="text/css">
-{% raw open(c.config.Module.path+'/static/css/biblicity.css', 'rb').read().decode('utf-8') %}
+{% raw open(c.config.Module.path+'/static/css/biblicity-email.css', 'rb').read().decode('utf-8') %}
 		</style>
 {% block stylesheets %}
 {% end %}
