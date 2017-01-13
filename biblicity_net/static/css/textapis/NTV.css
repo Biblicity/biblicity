@@ -29,8 +29,7 @@ div.NTV .ital {
 }
 
 div.NTV .psa-title-sc {
-	text-transform: uppercase;
-	font-size: 80%;
+	font-variant: small-caps;
 }
 
 div.NTV .red {
@@ -43,8 +42,7 @@ div.NTV .red-ital {
 }
 
 div.NTV .red-sc {
-	text-transform: uppercase;
-	font-size: 80%;
+	font-variant: small-caps;
     color: #8B0000;
 }
 
@@ -53,8 +51,7 @@ div.NTV .sc {
 }
 
 div.NTV .sc-ital {
-	text-transform: uppercase;
-	font-size: 80%;
+	font-variant: small-caps;
 	font-style: italic;
 }
 
@@ -63,8 +60,7 @@ div.NTV .subhead-ital {
 }
 
 div.NTV .subhead-sc {
-	text-transform: uppercase;
-	font-size: 80%;
+	font-variant: small-caps;
 }
 
 div.NTV .tc-ital {
@@ -546,8 +542,7 @@ div.NTV-Front p.title-2 {
 }
 
 div.NTV-Front .sc {
-	font-size: 80%;
-	text-transform: uppercase;
+	font-variant: small-caps;
 }
 
 div.NTV-Front table {}
@@ -640,8 +635,7 @@ div.ConcEntry span.ks {
 }
 
 div.ConcEntry span.ks-sc {
-	text-transform: uppercase;
-	font-size: 80%;
+	font-variant: small-caps;
 	font-weight: bold;
 }
 
@@ -651,8 +645,7 @@ div.ConcEntry span.ord {
 }
 
 div.ConcEntry span.sc {
-	text-transform: uppercase;
-	font-size: 80%;
+	font-variant: small-caps;
 }
 
 div.ConcEntry span.smallcaps {
@@ -690,19 +683,16 @@ div.NTV-TextNote span.tn-ital {
 
 div.NTV-TextNote span.tn-ref-bold-sc {
 	font-weight: bold;
-	font-size: 80%;
-	text-transform: uppercase;
+	font-variant: small-caps;
 }
 
 div.NTV-TextNote span.tn-sc {
-	font-size: 80%;
-	text-transform: uppercase;
+	font-variant: small-caps;
 }
 
 div.NTV-TextNote span.tn-sc-ital {
 	font-style: italic;
-	font-size: 80%;
-	text-transform: uppercase;
+	font-variant: small-caps;
 }
 
 div.NTV-TextNote span.tn-vn {

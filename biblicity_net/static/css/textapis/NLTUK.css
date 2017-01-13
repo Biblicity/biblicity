@@ -29,8 +29,7 @@ div.NLTUK .ital {
 }
 
 div.NLTUK .psa-title-sc {
-	text-transform: uppercase;
-	font-size: 80%;
+	font-variant: small-caps;
 }
 
 div.NLTUK .red {
@@ -43,8 +42,7 @@ div.NLTUK .red-ital {
 }
 
 div.NLTUK .red-sc {
-	text-transform: uppercase;
-	font-size: 80%;
+	font-variant: small-caps;
     color: #8B0000;
 }
 
@@ -53,8 +51,7 @@ div.NLTUK .sc {
 }
 
 div.NLTUK .sc-ital {
-	text-transform: uppercase;
-	font-size: 80%;
+	font-variant: small-caps;
 	font-style: italic;
 }
 
@@ -63,8 +60,7 @@ div.NLTUK .subhead-ital {
 }
 
 div.NLTUK .subhead-sc {
-	text-transform: uppercase;
-	font-size: 80%;
+	font-variant: small-caps;
 }
 
 div.NLTUK .tc-ital {
@@ -550,8 +546,7 @@ div.NLTUK-Front p.title-2 {
 }
 
 div.NLTUK-Front .sc {
-	font-size: 80%;
-	text-transform: uppercase;
+	font-variant: small-caps;
 }
 
 div.NLTUK-Front table {}
@@ -593,19 +588,16 @@ div.NLTUK-TextNote span.tn-ital {
 
 div.NLTUK-TextNote span.tn-ref-bold-sc {
 	font-weight: bold;
-	font-size: 80%;
-	text-transform: uppercase;
+	font-variant: small-caps;
 }
 
 div.NLTUK-TextNote span.tn-sc {
-	font-size: 80%;
-	text-transform: uppercase;
+	font-variant: small-caps;
 }
 
 div.NLTUK-TextNote span.tn-sc-ital {
 	font-style: italic;
-	font-size: 80%;
-	text-transform: uppercase;
+	font-variant: small-caps;
 }
 
 div.NLTUK-TextNote span.tn-vn {

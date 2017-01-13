@@ -30,8 +30,7 @@ div.NLT .ital {
 }
 
 div.NLT .psa-title-sc {
-	text-transform: uppercase;
-	font-size: 80%;
+	font-variant: small-caps;
 }
 
 div.NLT .red {
@@ -44,8 +43,7 @@ div.NLT .red-ital {
 }
 
 div.NLT .red-sc {
-	text-transform: uppercase;
-	font-size: 80%;
+	font-variant: small-caps;
     color: #8B0000;
 }
 
@@ -54,8 +52,7 @@ div.NLT .sc {
 }
 
 div.NLT .sc-ital {
-	text-transform: uppercase;
-	font-size: 80%;
+	font-variant: small-caps;
 	font-style: italic;
 }
 
@@ -64,8 +61,7 @@ div.NLT .subhead-ital {
 }
 
 div.NLT .subhead-sc {
-	text-transform: uppercase;
-	font-size: 80%;
+	font-variant: small-caps;
 }
 
 div.NLT .tc-ital {
@@ -551,8 +547,7 @@ div.NLT-Front p.title-2 {
 }
 
 div.NLT-Front .sc {
-	font-size: 80%;
-	text-transform: uppercase;
+	font-variant: small-caps;
 }
 
 div.NLT-Front table {}
@@ -594,19 +589,16 @@ div.NLT-TextNote span.tn-ital {
 
 div.NLT-TextNote span.tn-ref-bold-sc {
 	font-weight: bold;
-	font-size: 80%;
-	text-transform: uppercase;
+	font-variant: small-caps;
 }
 
 div.NLT-TextNote span.tn-sc {
-	font-size: 80%;
-	text-transform: uppercase;
+	font-variant: small-caps;
 }
 
 div.NLT-TextNote span.tn-sc-ital {
 	font-style: italic;
-	font-size: 80%;
-	text-transform: uppercase;
+	font-variant: small-caps;
 }
 
 div.NLT-TextNote span.tn-vn {
