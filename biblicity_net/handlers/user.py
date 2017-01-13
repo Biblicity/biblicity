@@ -109,7 +109,7 @@ class UserLogin(UserHandler):
             if c.get_argument('return', default=None) not in [None, '']:
                 c.redirect(c.get_argument('return'))
             else:
-                c.redirect(c.config.Site.url + '/user/' + user.id_slash_name)
+                c.redirect(c.config.Site.url)# + '/user/' + user.id_slash_name)
 
 class UserLogout(UserHandler):
     def get(c):
