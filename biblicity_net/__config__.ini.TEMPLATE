@@ -1,3 +1,8 @@
+# create a file called __config__.ini next to this file, and then update the values with your local parameters:
+# * Module.path
+# * Database.connection_string
+# * Site parameters
+# * Tornado.cookie_secret (or else your secret will not be!)
 
 [Module] 
 path: /Users/sah/biblicity/biblicity_net/biblicity_net

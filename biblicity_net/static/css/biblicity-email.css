@@ -1,0 +1,118 @@
+
+html {
+	font-size: 16pt;
+	font-family: sans-serif;
+}
+
+body {
+}
+
+ul {
+	padding-left: 0;
+	list-style-type: square;
+}
+
+li {
+	margin-left: 16pt;
+}
+
+div#main {
+    padding: 1em 0;
+    line-height: 24pt;
+}
+
+div#footer {
+	clear: both;
+    margin-top: 32pt;
+    border-top: 1px solid #999;
+    padding-top: 8pt;
+	font-size: 12pt;
+}
+
+h1, h2, h3, h4 {
+	margin: 16pt 0 8pt 0;
+	font-family: sans-serif;
+	font-weight: normal;
+}
+
+h1 { font-size: 32pt; }
+h2 { font-size: 20pt; }
+h3 { font-size: 18pt; font-style: italic; }
+
+p {
+	margin: 4pt 0 8pt 0;
+}
+
+a, a:link, a:visited {
+	color: green;
+	text-decoration: none;
+}
+
+.float-right {
+	float: right;
+	margin-left: 16pt;
+}
+.float-left {
+	float: left;
+	margin-right: 16pt;
+}
+
+.left {
+	text-align: left;
+}
+.right {
+	text-align: right;
+}
+.caps-small {
+	font-size: 75%;
+}
+
+.label {
+	font-size: 14pt;
+	font-weight: bold;
+	font-family: sans-serif;
+}
+
+.label-light {
+    font-size: 12pt;
+    font-weight: normal;
+    font-family: sans-serif;
+}
+
+.link {
+	color: green;
+}
+
+a.icon,
+span.icon {
+	padding: 3pt;
+	font-size: 12pt;
+}
+
+b, strong, .bold {
+	font-family: sans-serif;
+	font-weight: bold;
+}
+
+.italic {
+	font-style: italic;
+}
+
+td {
+	/*vertical-align: top;*/
+	padding: 2px 10px 2px 0px;
+}
+
+.listing {
+	margin-top: 48pt;
+	border-top: 1px solid #999;
+	font-family: sans-serif;
+}
+
+.byline {
+	margin-bottom: 1em;
+	font-family: sans-serif;
+	font-size: 14pt;
+	font-style: italic;
+}
+

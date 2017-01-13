@@ -1,0 +1,4 @@
+{% block main %}	
+{% end %}
+
+{{c.config.Site.name}} copyright &copy; 2017 by Black Earth Group, Inc. All rights reserved. Biblicity and the Biblicity logo are trademarks of Black Earth Group, Inc.
