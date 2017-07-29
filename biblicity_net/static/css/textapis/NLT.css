@@ -134,11 +134,12 @@ div.NLT p.body-sp {
 }
 
 div.NLT p.chapter-number {
-	float: left;
+    /*	float: left; */
+    margin-top: 1.0ex;
 	padding-right: 0.5ex;
 	text-indent: 0;
 	vertical-align: top;
-	line-height: 1.0;
+	line-height: 0.8;
 	text-indent: 0;
 	font-size: 300%;
 	font-weight: normal;

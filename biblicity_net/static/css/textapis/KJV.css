@@ -133,14 +133,15 @@ div.KJV p.body-sp {
 }
 
 div.KJV p.chapter-number {
-    float: left;
-    padding-right: 0.5ex;
-    text-indent: 0;
-    vertical-align: top;
-    line-height: 1.0;
-    text-indent: 0;
-    font-size: 300%;
-    font-weight: normal;
+    /*	float: left; */
+    margin-top: 1.0ex;
+	padding-right: 0.5ex;
+	text-indent: 0;
+	vertical-align: top;
+	line-height: 0.8;
+	text-indent: 0;
+	font-size: 300%;
+	font-weight: normal;
 }
 
 div.KJV a.chapter-number {
