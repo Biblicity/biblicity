@@ -1,6 +1,6 @@
 {% extends "layout.xhtml" %}
 {% block stylesheets %}
-		{% set version = c.get_argument('version', 'NLT') %}
+		{% set version = c.get_argument('version', 'ESV') %}
 		<link rel="stylesheet" href="{{c.static_url('css/textapis/' + version + '.css')}}"/>
 {% end %}
 {% block main %}
@@ -13,7 +13,7 @@
 			{% if v != versions[-1] %} &#x25aa; {% end if %}
 		{% end for %}
 	</p>
-	{% set version = c.get_argument('version', 'NLT') %}
+	{% set version = c.get_argument('version', 'ESV') %}
 	{% if version in versions %}
 		{% set fn = c.config.Module.path+"/templates/today-2017/%s.html" % version %}
 		{% if c.os.path.exists(fn) %}
