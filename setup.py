@@ -1,6 +1,6 @@
 config = {
   "name": "biblicity_net",
-  "version": "0.2.5",
+  "version": "0.3.0",
   "description": "Python web application for biblicity.net",
   "url": "",
   "author": "Sean Harrison",
