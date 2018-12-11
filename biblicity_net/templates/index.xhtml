@@ -5,7 +5,7 @@
 {% end %}
 {% block main %}
 	{% set date = c.datetime.now() %}
-	<h1>{{date.strftime("%B %d, %Y")}}</h1>
+	<h1>{{date.strftime("%B %-d, %Y")}}</h1>
 	<p>
 		{% set versions = ['ESV', 'NLT', 'NLTUK', 'NTV', 'KJV'] %}
 		{% for v in versions %}
