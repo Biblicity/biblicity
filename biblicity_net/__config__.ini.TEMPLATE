@@ -1,8 +1,3 @@
-# create a file called __config__.ini next to this file, and then update the values with your local parameters:
-# * Module.path
-# * Database.connection_string
-# * Site parameters
-# * Tornado.cookie_secret (or else your secret will not be!)
 
 [Module] 
 path: /Users/sah/biblicity/biblicity_net/biblicity_net
@@ -30,7 +25,7 @@ session_storage: DatabaseStorage
 
 [Tornado]
 template_path: ${Module:path}/templates
-static_path: ${Module:path}/www
+static_path: ${Module:path}/static
 static_url_prefix: /static/
 cookie_secret: yJBh9KKKNYGewpqYsvgg83jU5MC7mZzhmX5WCeurAt5kJMj4hekqVfvNyeBu9UkC
 xsrf_cookies: True
@@ -43,3 +38,12 @@ port: 25
 
 [Markdown]
 extensions: ['extra', 'admonition', 'meta', 'nl2br', 'smarty', 'toc', 'wikilinks']
+
+[OtherAPI]
+nltkey: djIeVvJOlwYyDhPbC20CiuyacnfhUC6p
+esvkey: 413a533fbc34a236
+nlt: http://api.nlt.to/api/passages?key=${nltkey}&version=NLT&ref=
+nltuk: http://api.nlt.to/api/passages?key=${nltkey}&version=NLTUK&ref=
+ntv: http://api.nlt.to/api/passages?key=${nltkey}&version=NTV&ref=
+kjv: http://api.nlt.to/api/passages?key=${nltkey}&version=KJV&ref=
+esv: http://www.esvapi.org/v2/rest/passageQuery?key=${esvkey}&include-short-copyright=false&include-copyright=false&passage=

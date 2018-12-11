@@ -1,11 +1,11 @@
 {% extends "layout.xhtml" %}
 {% block stylesheets %}
-		{% set version = c.get_argument('version', 'ESV') %}
+		{% set version = c.get_argument('version', 'NLT') %}
 		<link rel="stylesheet" href="{{c.static_url('css/textapis/' + version + '.css')}}"/>
 {% end %}
 {% block main %}
-	{% set date = c.datetime.now().strftime("%B %d").replace(" 0", " ") %}
-	<h1><a href="{{c.config.Site.url}}/reading-plans/2017-reading-plan#{{date.replace(' ', '-')}}">{{date}}</a></h1>
+	{% set date = c.datetime.now() %}
+	<h1>{{date.strftime("%B %d, %Y")}}</h1>
 	<p>
 		{% set versions = ['ESV', 'NLT', 'NLTUK', 'NTV', 'KJV'] %}
 		{% for v in versions %}
@@ -13,9 +13,10 @@
 			{% if v != versions[-1] %} &#x25aa; {% end if %}
 		{% end for %}
 	</p>
-	{% set version = c.get_argument('version', 'ESV') %}
+	{% set version = c.get_argument('version', 'NLT') %}
 	{% if version in versions %}
-		{% set fn = c.config.Module.path+"/templates/today-2017/%s.html" % version %}
+		{% set fn = c.os.path.join(c.os.path.dirname(c.config.Module.path),"var/readings/%s_%s.html" % (date.strftime("%Y-%m-%d"), version)) %}
+		{{ c.log.debug(fn) or '' }}
 		{% if c.os.path.exists(fn) %}
 		{% raw open(fn, 'rb').read().decode('utf-8') %}
 		{% else %}

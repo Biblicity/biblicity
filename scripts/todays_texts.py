@@ -7,30 +7,28 @@ logging.basicConfig(format='[%(asctime)s] %(levelname)s: %(message)s', level=log
 log = logging.getLogger(__name__)
 
 import os, re, sys, json, traceback
-from datetime import datetime
+from datetime import date
 from lxml import etree
 from tornado.httpclient import HTTPClient
 from bl.text import Text
 from bxml import XML
-from biblicity_net import config
+from biblicity_net import config, PATH, readings
 
 VERSIONS = ['ESV', 'NLT', 'NLTUK', 'NTV', 'KJV']
-SAVE_PATH = os.path.join(config.Tornado.template_path, 'today-2017')
-
-with open(os.path.splitext(__file__)[0]+'.json') as f:
-    readings = json.loads(f.read())
-
-date = datetime.now().strftime("%B %d")
-reading = readings.get(date) or ""
+SAVE_PATH = os.path.join(os.path.dirname(PATH), 'var', 'readings')
+if not os.path.isdir(SAVE_PATH):
+    os.makedirs(SAVE_PATH)
 
 httpclient = HTTPClient()
 htmlparser = etree.HTMLParser()
 
-for version in VERSIONS:
-    tfn = os.path.join(SAVE_PATH, version+'.html')
-    if os.path.exists(tfn):
-        os.remove(tfn)
-    if reading != "":
+date = date.today()
+reading = readings.date_reading(date).replace(' ', '.')
+if reading is not None:
+    for version in VERSIONS:
+        tfn = os.path.join(SAVE_PATH, '%s_%s.html' % (date.strftime("%Y-%m-%d"), version))
+        if os.path.exists(tfn):
+            os.remove(tfn)
         try:
             url = config.OtherAPI[version.lower()] + reading
             log.info(url)
@@ -48,4 +46,4 @@ for version in VERSIONS:
             log.info(tfn)
         except:
             log.error(traceback.format_exc())
-            
+                

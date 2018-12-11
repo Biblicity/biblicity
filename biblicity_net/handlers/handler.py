@@ -18,6 +18,7 @@ class Handler(bweb.handler.Handler):
         if c.session.get('messages') is not None:
             c.messages.update(**c.session.get('messages'))
         c.session['messages'] = Dict()            
+        c.log = log
         log.debug({'url': str(c.url), 'method': c.request.method, 'handler': c.__class__.__name__})
 
     def prepare(c):
