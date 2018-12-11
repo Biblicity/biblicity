@@ -1,6 +1,5 @@
 bcrypt==3.1.4
 -e git+https://github.com/BlackEarth/bf.git@881bb7fae398651b8e9c098b40e84331f264d056#egg=bf
--e git+https://github.com/Biblicity/biblicity_net.git@8a4d1f1e09a8c35da2cf9e08bb7d88fc1328cc49#egg=biblicity_net
 -e git+https://github.com/BlackEarth/bl.git@7da1b82d457e02fc9bb773f3266578d23c538fbd#egg=bl
 bleach==3.0.2
 -e git+https://github.com/BlackEarth/bsql.git@238bfaf0162f02fcf6304c3256b120c4ea83169f#egg=bsql
